@@ -279,9 +279,9 @@ int do_story(int cn, int co, struct sidestory_ppd *ppd, struct story_npc *me, st
                 pos += sprintf(buf + pos, " [ ");
                 for (m = 0; story[n].a[m].text; m++) {
                     if (m > 0) pos += sprintf(buf + pos, " / ");
-                    pos += sprintf(buf + pos, "°c4");
+                    pos += sprintf(buf + pos, "\260c4");
                     pos += sprintf(buf + pos, story[n].a[m].text, ch[cn].name);
-                    pos += sprintf(buf + pos, "°c0");
+                    pos += sprintf(buf + pos, "\260c0");
                 }
                 pos += sprintf(buf + pos, " ]"); // (state=%d, like=%d)",me->state,me->like);
                 me->last_say = realtime;
@@ -564,7 +564,7 @@ int ruby_aston_char(int cn, int co, struct sidestory_ppd *ppd) {
             ppd->ruby3.state = 0;
             break;
         }
-        quiet_say(cn, "What modifier wouldst thou like? [ °c4Tactics°c0 / °c4%s°c0 / °c4Bless°c0 ]", skill[ppd->ruby3.skl].name);
+        quiet_say(cn, "What modifier wouldst thou like? [ \260c4Tactics\260c0 / \260c4%s\260c0 / \260c4Bless\260c0 ]", skill[ppd->ruby3.skl].name);
         ppd->ruby3.state++;
         didsay = 1;
         break;
@@ -583,7 +583,7 @@ int ruby_aston_char(int cn, int co, struct sidestory_ppd *ppd) {
             ppd->ruby3.state = 0;
             break;
         }
-        quiet_say(cn, "Ok, %s it is. What other modifier wouldst thou like? [ °c4Wisdom°c0 / °c4Intuition°c0 / °c4Agility°c0 / °c4Strength°c0 ]", skill[ppd->ruby3.mod1].name);
+        quiet_say(cn, "Ok, %s it is. What other modifier wouldst thou like? [ \260c4Wisdom\260c0 / \260c4Intuition\260c0 / \260c4Agility\260c0 / \260c4Strength\260c0 ]", skill[ppd->ruby3.mod1].name);
         ppd->ruby3.state++;
         didsay = 1;
         break;
@@ -650,9 +650,9 @@ int ruby_aston_char(int cn, int co, struct sidestory_ppd *ppd) {
 
         ppd->ruby3.add = min(val, bitvalue * 20 / 260);
 
-        if (ppd->ruby3.skl == V_HAND) quiet_say(cn, "I have a pair of gloves, with %s+%d and %s+%d. [ °c4That'd be great!°c0 / °c4Uh, no, but thanks anyway.°c0 ]", skill[ppd->ruby3.mod1].name, ppd->ruby3.add, skill[ppd->ruby3.mod2].name, ppd->ruby3.add);
-        else if (ppd->ruby3.skl == V_TWOHAND) quiet_say(cn, "I have a two-handed sword with %s+%d and %s+%d. [ °c4That'd be great!°c0 / °c4Uh, no, but thanks anyway.°c0 ]", skill[ppd->ruby3.mod1].name, ppd->ruby3.add, skill[ppd->ruby3.mod2].name, ppd->ruby3.add);
-        else quiet_say(cn, "I have a %s with with %s+%d and %s+%d. [ °c4That'd be great!°c0 / °c4Uh, no, but thanks anyway.°c0 ]", skill[ppd->ruby3.skl].name, skill[ppd->ruby3.mod1].name, ppd->ruby3.add, skill[ppd->ruby3.mod2].name, ppd->ruby3.add);
+        if (ppd->ruby3.skl == V_HAND) quiet_say(cn, "I have a pair of gloves, with %s+%d and %s+%d. [ \260c4That'd be great!\260c0 / \260c4Uh, no, but thanks anyway.\260c0 ]", skill[ppd->ruby3.mod1].name, ppd->ruby3.add, skill[ppd->ruby3.mod2].name, ppd->ruby3.add);
+        else if (ppd->ruby3.skl == V_TWOHAND) quiet_say(cn, "I have a two-handed sword with %s+%d and %s+%d. [ \260c4That'd be great!\260c0 / \260c4Uh, no, but thanks anyway.\260c0 ]", skill[ppd->ruby3.mod1].name, ppd->ruby3.add, skill[ppd->ruby3.mod2].name, ppd->ruby3.add);
+        else quiet_say(cn, "I have a %s with with %s+%d and %s+%d. [ \260c4That'd be great!\260c0 / \260c4Uh, no, but thanks anyway.\260c0 ]", skill[ppd->ruby3.skl].name, skill[ppd->ruby3.mod1].name, ppd->ruby3.add, skill[ppd->ruby3.mod2].name, ppd->ruby3.add);
         ppd->ruby3.state++;
         didsay = 1;
         break;

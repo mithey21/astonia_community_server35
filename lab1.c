@@ -445,7 +445,7 @@ void deathfibrin(int in, int cn) {
         // remove amount
         dat->amount = max(0, dat->amount - 1000);
         if (deathfibrin_check(in, dat)) {
-            log_char(cn, LOG_SYSTEM, 0, "°c3Your %s vanished.", it[in].name);
+            log_char(cn, LOG_SYSTEM, 0, "\260c3Your %s vanished.", it[in].name);
             return;
         }
     } else {
@@ -473,7 +473,7 @@ void deathfibrin(int in, int cn) {
         if (map[mn = x + y * MAXMAP].light > 4 && ticker > dat->tickerused) {
             dat->amount = max(0, dat->amount - (map[mn].light - 3) * (map[mn].light * map[mn].light - 3));
             if (deathfibrin_check(in, dat) && co) {
-                log_char(co, LOG_SYSTEM, 0, "°c3Your %s vanished.", it[in].name);
+                log_char(co, LOG_SYSTEM, 0, "\260c3Your %s vanished.", it[in].name);
                 return;
             }
         }

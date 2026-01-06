@@ -259,19 +259,19 @@ void book_driver(int in, int cn) {
 
     case BOOK_RUNES1:
         log_char(cn, LOG_SYSTEM, 0, "Personal Diary of Korzam, Magical Advisor of Scarcewind.");
-        log_char(cn, LOG_SYSTEM, 0, "°c1The line above has been nearly scratched out, and replaced by:");
+        log_char(cn, LOG_SYSTEM, 0, "\260c1The line above has been nearly scratched out, and replaced by:");
         log_char(cn, LOG_SYSTEM, 0, "Personal Diary of Korzam, Governor of Exkordon.");
         log_char(cn, LOG_SYSTEM, 0, "Scarcewind, the fool, is still loyal to Aston. He does not understand that the only way for our city to prosper is to cut our ties to that rotten empire. What good is an advisor, if no one listens to him?");
         log_char(cn, LOG_SYSTEM, 0, "To get my mind on other things, I have gone north, into the barren lands below the mountains, hunting rumors. It is said that huge towers are build on those plains, and in those mountains. Towers built by powerful wizards of the old age. Whoever started these rumors has his history wrong, that is for sure. There was no old age. Before us were the ancients. They destroyed each other, and the world, in their foolish war. After them came we, and Ishtar and his notions of godhood and the empire.");
         log_char(cn, LOG_SYSTEM, 0, "But if these towers are really there, and if they are as magical as the rumors say, who built them? Who else but the ancients! There was no one else who could have built them. And if the ancients are the makers, those towers are old and must have survived the destructions of the war. I want to see what kind of magic can make buildings survive what has shattered the earth.");
-        log_char(cn, LOG_SYSTEM, 0, "°c1You skip several pages containing a description of the voyage to the towers.");
+        log_char(cn, LOG_SYSTEM, 0, "\260c1You skip several pages containing a description of the voyage to the towers.");
         log_char(cn, LOG_SYSTEM, 0, "I have forced my way into one of the towers. Magical they are, for sure, and guarded by the living dead. Fighting my way inside nearly exhausted me, and all I could do was grab some parchments and a small bag and flee, before those undead came back in greater numbers.");
         log_char(cn, LOG_SYSTEM, 0, "The book is written in the language of the ancients. Unfortunately, I can barely understand some words. The bag contained polished pieces of bone, each bearing a rune. I will return to Exkordon now, and study them at my leisure.");
         log_char(cn, LOG_SYSTEM, 0, "I found some pictures in the book, showing how to arrange the runes. I wonder what will happen...");
-        log_char(cn, LOG_SYSTEM, 0, "°c1You notice a change in the writing. It is the same hand, but the letters are bigger, and more forcefully written.");
+        log_char(cn, LOG_SYSTEM, 0, "\260c1You notice a change in the writing. It is the same hand, but the letters are bigger, and more forcefully written.");
         log_char(cn, LOG_SYSTEM, 0, "That does it. Scarewind is a weak fool. I shall kill him, and take Exkordons fate into my own hands.");
         log_char(cn, LOG_SYSTEM, 0, "Easy, almost too easy it was. I am now Governor of Exkordon. Scarcewind died like the fool he was in life. 'How can you do that? Why? I trusted you!' What a fool. I invited him into my house, told him about an important discovery I made. He came, and left his guards outside. And so he died. When his guards came looking for him, I lured them into my cellars, and disposed of them. They are no match for the ancient's magic.");
-        log_char(cn, LOG_SYSTEM, 0, "°c1Here, the writing changes back to the style used in the beginning.");
+        log_char(cn, LOG_SYSTEM, 0, "\260c1Here, the writing changes back to the style used in the beginning.");
         log_char(cn, LOG_SYSTEM, 0, "What have I done? What came over me? And why are the dead rising, and walking my halls? They are dead! Dead! I killed them!");
         return;
 
@@ -306,7 +306,7 @@ void book_driver(int in, int cn) {
     case BOOK_BONES1:
         log_char(cn, LOG_SYSTEM, 0, "Day 12, year 45. Personal diary of Sluiran of the Caremar.");
         log_char(cn, LOG_SYSTEM, 0, "The battles raging outside are closer to our hiding place. We must find some means to defend ourselves. I have started to study the forbidden art of necromancy, based on the rune magic. The undead shall fight where the living cannot.");
-        log_char(cn, LOG_SYSTEM, 0, "°c1You skip some pages.");
+        log_char(cn, LOG_SYSTEM, 0, "\260c1You skip some pages.");
         log_char(cn, LOG_SYSTEM, 0, "Day 37, year 47. Personal diary of Sluiran of the Caremar.");
         log_char(cn, LOG_SYSTEM, 0, "The towers have fallen, but the undead have held our halls against the first wave of attackers. I have many, many bodies for my work now. More and more undead shall defend us. We might survive, after all.");
         return;

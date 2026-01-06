@@ -866,7 +866,7 @@ void smith_driver(int cn, int ret, int lastact) {
                     has_item(co, IID_CALIGARKEYP3)) ppd->smith_state++; // fall thru
                 else break;
             case 1:
-                quiet_say(cn, "Hello there. I hear you need a key made. Well, for a small fee of 5000 gold I would be more than willing to do it. °c4Yes, Okay°c0 / °c4No, not today°c0");
+                quiet_say(cn, "Hello there. I hear you need a key made. Well, for a small fee of 5000 gold I would be more than willing to do it. \260c4Yes, Okay\260c0 / \260c4No, not today\260c0");
                 ppd->smith_last_talk = realtime;
                 ppd->smith_state++;
                 didsay = 1;
@@ -900,7 +900,7 @@ void smith_driver(int cn, int ret, int lastact) {
                 didsay = 1;
                 break;
             case 7:
-                quiet_say(cn, "Well I forged you a key for 5000g, a hand written dictionary like this must be worth at least the double. So °c04pay 10000g°c0 must be a fair price don't you think?");
+                quiet_say(cn, "Well I forged you a key for 5000g, a hand written dictionary like this must be worth at least the double. So \260c04pay 10000g\260c0 must be a fair price don't you think?");
                 ppd->smith_state++;
                 ppd->smith_last_talk = realtime;
                 didsay = 1;

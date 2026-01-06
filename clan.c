@@ -389,7 +389,7 @@ void show_clan_message(int cn) {
     cnr = get_char_clan(cn);
     if (cnr) {
         if (clan[cnr].message[0]) {
-            log_char(cn, LOG_SYSTEM, 0, "°c16Clan Message: %s", clan[cnr].message);
+            log_char(cn, LOG_SYSTEM, 0, "\260c16Clan Message: %s", clan[cnr].message);
         }
     }
 }

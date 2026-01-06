@@ -261,7 +261,7 @@ void merchant_driver(int cn, int ret, int lastact) {
                 continue;
             }
 
-            quiet_say(cn, "Hello %s! If thou wouldst like to trade, say: '°c4%s, trade°c0!", ch[co].name, ch[cn].name);
+            quiet_say(cn, "Hello %s! If thou wouldst like to trade, say: '\260c4%s, trade\260c0!", ch[co].name, ch[cn].name);
             mem_add_driver(cn, co, 7);
         }
 

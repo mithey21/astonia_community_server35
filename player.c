@@ -520,7 +520,7 @@ static void cl_use_inv(int nr, char *buf) {
     cn = player[nr]->cn;
 
     if (!(ch[cn].flags & CF_PAID) && pos >= UNPAIDINVENTORYSIZE) {
-        log_char(cn, LOG_SYSTEM, 0, "°c3These slots can only be used by premium accounts.");
+        log_char(cn, LOG_SYSTEM, 0, "\260c3These slots can only be used by premium accounts.");
         return;
     }
 

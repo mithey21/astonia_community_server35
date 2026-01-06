@@ -242,7 +242,7 @@ void clanmaster_driver(int cn, int ret, int lastact) {
                 continue;
             }
 
-            if (!get_char_club(co) && !get_char_clan(co) && clanslot_free(cnr)) quiet_say(cn, "Hello %s! Would you like to found a °c4clan°c0?", ch[co].name);
+            if (!get_char_club(co) && !get_char_clan(co) && clanslot_free(cnr)) quiet_say(cn, "Hello %s! Would you like to found a \260c4clan\260c0?", ch[co].name);
             else if (get_char_clan(co) == cnr) quiet_say(cn, "Welcome to your clan hall, %s.", ch[co].name);
             else if (!clanslot_free(cnr)) quiet_say(cn, "Welcome to the %s clan hall, %s.", get_clan_name(cnr), ch[co].name);
 
@@ -423,7 +423,7 @@ void clanmaster_driver(int cn, int ret, int lastact) {
                         res = found_clan(fnd->name, co, cnr);
                         if (!res) {
                             quiet_say(cn, "So be it. There will be a new clan, named '%s', and you, %s, shall be its new master. Good luck, young master!", fnd->name, ch[co].name);
-                            quiet_say(cn, "°c3Stay with me for a few minutes till the paperwork is finished, %s. If you stray to far, news of your clan might not have reached there, and you might lose your clan membership. (Waiting 5 minutes will be sufficient. Please use your own clock, the clanmaster will not tell you when the time is up. Fixing this is on Ishtar's Todo-List)", ch[co].name);
+                            quiet_say(cn, "\260c3Stay with me for a few minutes till the paperwork is finished, %s. If you stray to far, news of your clan might not have reached there, and you might lose your clan membership. (Waiting 5 minutes will be sufficient. Please use your own clock, the clanmaster will not tell you when the time is up. Fixing this is on Ishtar's Todo-List)", ch[co].name);
                             fnd->state = 0;
 
                             add_member(co, cnr, ch[co].name);
@@ -957,8 +957,8 @@ void clanspawn_driver(int in, int cn) {
 
     cname = get_char_clan_name(cn);
 
-    if (cname) sprintf(buf, "0000000000°c15Clan: %s won a Jewel for %s from level %d!", ch[cn].name, cname, it[in].drdata[0]);
-    else sprintf(buf, "0000000000°c15Clan: %s has won a Jewel from level %d!", ch[cn].name, it[in].drdata[0]);
+    if (cname) sprintf(buf, "0000000000\260c15Clan: %s won a Jewel for %s from level %d!", ch[cn].name, cname, it[in].drdata[0]);
+    else sprintf(buf, "0000000000\260c15Clan: %s has won a Jewel from level %d!", ch[cn].name, it[in].drdata[0]);
     server_chat(10, buf);
 
     summary("spawns", 0);
@@ -1195,7 +1195,7 @@ void clanvault_driver(int cn, int ret, int lastact) {
             co = msg->dat1;
             if (!co) break;
             if (ch[cn].hp < dat->last_hp && ticker - dat->last_shout > TICKS * 60) {
-                sprintf(buf, "0000000000°c15The clanvault of %s is under attack by %s of %s. Health is at %.2f%%",
+                sprintf(buf, "0000000000\260c15The clanvault of %s is under attack by %s of %s. Health is at %.2f%%",
                         get_clan_name(cnr),
                         ch[co].name,
                         get_clan_name(get_char_clan(co)),
@@ -1246,7 +1246,7 @@ void clanvault_dead(int cn, int co) {
             it[in].drdata[4] = v;
             sprintf(it[in].description, "The jewel is worth %d points.", v);
             if (!give_char_item(co, in)) destroy_item(co);
-            sprintf(buf, "0000000000°c15The clanvault of %s is was destroyed by %s of %s. A jewel worth %d points was stolen.",
+            sprintf(buf, "0000000000\260c15The clanvault of %s is was destroyed by %s of %s. A jewel worth %d points was stolen.",
                     get_clan_name(cnr),
                     ch[co].name,
                     get_clan_name(get_char_clan(co)),

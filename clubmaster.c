@@ -230,7 +230,7 @@ void clubmaster_driver(int cn, int ret, int lastact) {
                 continue;
             }
 
-            if (!get_char_club(cn) && !get_char_clan(cn)) quiet_say(cn, "Hello %s! Would you like to found a °c4club°c0?", ch[co].name);
+            if (!get_char_club(cn) && !get_char_clan(cn)) quiet_say(cn, "Hello %s! Would you like to found a \260c4club\260c0?", ch[co].name);
             mem_add_driver(cn, co, 7);
         }
 

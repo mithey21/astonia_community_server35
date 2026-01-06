@@ -82,11 +82,11 @@ struct qa qa[] = {
     {{"hail", NULL}, "And hail to you, %s!", 0},
     {{"what's", "up", NULL}, "Everything that isn't nailed down.", 0},
     {{"what", "is", "up", NULL}, "Everything that isn't nailed down.", 0},
-    {{"warped", "world", NULL}, "This world has been created by Rodney, the Mighty Mage. Well, actually, Ishtar created it while he was trying out designs for his Labyrinth, but Rodney added the final touches. He tried to create a Labyrinth, just like Ishtar. Anyway. Do you want to buy some °c4keys°c0 and °c4explore°c0 it?", 0},
-    {{"keys", NULL}, "You need keys to open the various doors here. Each key will only work once, so you'll need plenty of them. I'll trade one key for an earth °c4stone°c0, two keys for a fire stone, three keys for an ice stone and four keys for a hell stone. Just hand me the stones if you want to trade.", 0},
-    {{"stone", NULL}, "I need the stones to power the °c4Warped World°c0. Rodney created a device that will draw power from them.", 0},
-    {{"explore", NULL}, "It might be worth the trouble. Adventurers report that °c4dangers°c0 and rewards are to be found inside. Oh, and one word of warning: Don't venture into the blue area before you're level 70.", 0},
-    {{"dangers", NULL}, "It is said that enemies hide behind red doors. I've also heard that people can get stuck, with no way to progress. Should that happen to you, ask me to °c4reset°c0 your current points. You will not lose the level reached.", 0},
+    {{"warped", "world", NULL}, "This world has been created by Rodney, the Mighty Mage. Well, actually, Ishtar created it while he was trying out designs for his Labyrinth, but Rodney added the final touches. He tried to create a Labyrinth, just like Ishtar. Anyway. Do you want to buy some \260c4keys\260c0 and \260c4explore\260c0 it?", 0},
+    {{"keys", NULL}, "You need keys to open the various doors here. Each key will only work once, so you'll need plenty of them. I'll trade one key for an earth \260c4stone\260c0, two keys for a fire stone, three keys for an ice stone and four keys for a hell stone. Just hand me the stones if you want to trade.", 0},
+    {{"stone", NULL}, "I need the stones to power the \260c4Warped World\260c0. Rodney created a device that will draw power from them.", 0},
+    {{"explore", NULL}, "It might be worth the trouble. Adventurers report that \260c4dangers\260c0 and rewards are to be found inside. Oh, and one word of warning: Don't venture into the blue area before you're level 70.", 0},
+    {{"dangers", NULL}, "It is said that enemies hide behind red doors. I've also heard that people can get stuck, with no way to progress. Should that happen to you, ask me to \260c4reset\260c0 your current points. You will not lose the level reached.", 0},
     {{"reset", NULL}, NULL, 2}
 
 };
@@ -897,7 +897,7 @@ void warpmaster(int cn, int ret, int lastact) {
             }
 
             if (ch[co].level < 30) say(cn, "Hello %s! You'd better leave this area - it is too dangerous for you.", ch[co].name);
-            else say(cn, "Hello %s! Welcome to Rodney's °c4Warped World°c0! Would you like to buy some °c4keys°c0?", ch[co].name);
+            else say(cn, "Hello %s! Welcome to Rodney's \260c4Warped World\260c0! Would you like to buy some \260c4keys\260c0?", ch[co].name);
             mem_add_driver(cn, co, 7);
         }
 

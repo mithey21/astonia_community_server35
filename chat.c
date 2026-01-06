@@ -190,7 +190,7 @@ static void rec_chat(unsigned short channel, char *text) {
             if (ch[n].ID != cnID) continue;
             if (channel != 1030 && (ch[n].flags & CF_NOTELL)) continue;
             if (channel != 1030 && ignoring(n, coID)) continue;
-            ret = log_char(n, LOG_SYSTEM, 0, "°c6%s", text + 22);
+            ret = log_char(n, LOG_SYSTEM, 0, "\260c6%s", text + 22);
             if (ret && coID) { // server sends messages with ID 0 and does not need a received note
                 sprintf(buf, "%010u:%010u", coID, cnID);
                 server_chat(1029, buf);
@@ -553,21 +553,21 @@ static int write_chat(int cn, int channel, char *text) {
     }
 
     if (ch[cn].flags & CF_STAFF) {
-        strcpy(name, "°c3°c17");
+        strcpy(name, "\260c3\260c17");
         for (n = 0; n < 75 && ch[cn].name[n]; n++) name[n + 7] = toupper(ch[cn].name[n]);
         name[n + 7] = 0;
-        sprintf(name + n + 7, "°c18°c%d", col);
+        sprintf(name + n + 7, "\260c18\260c%d", col);
     } else if (ch[cn].flags & CF_TUTOR) {
-        sprintf(name, "°c3°c17%s°c18°c%d", ch[cn].name, col);
+        sprintf(name, "\260c3\260c17%s\260c18\260c%d", ch[cn].name, col);
     } else if (ch[cn].flags & CF_GOD) {
-        sprintf(name, "°c8°c17%s°c18°c%d", ch[cn].name, col);
-    } else sprintf(name, "°c17%s°c18", ch[cn].name);
+        sprintf(name, "\260c8\260c17%s\260c18\260c%d", ch[cn].name, col);
+    } else sprintf(name, "\260c17%s\260c18", ch[cn].name);
 
-    if (channel == 0) sprintf(buf, "°c%d%s", col, text); // announce
-    else if (channel == 7 || channel == 12) sprintf(buf, "%010u:%02u:°c%d%s: %s says: \"%s\"", xID, get_char_clan(cn), col, cname[channel].name, name, text); // clan internal
-    else if (channel == 13) sprintf(buf, "%010u:%02u:°c%d%s: %s says: \"%s\"", xID, get_char_club(cn), col, cname[channel].name, name, text); // club internal
+    if (channel == 0) sprintf(buf, "\260c%d%s", col, text); // announce
+    else if (channel == 7 || channel == 12) sprintf(buf, "%010u:%02u:\260c%d%s: %s says: \"%s\"", xID, get_char_clan(cn), col, cname[channel].name, name, text); // clan internal
+    else if (channel == 13) sprintf(buf, "%010u:%02u:\260c%d%s: %s says: \"%s\"", xID, get_char_club(cn), col, cname[channel].name, name, text); // club internal
     else if (channel == 8) {
-        sprintf(buf, "%010u:%02u:°c%d%s: %s %s%s%s says: \"%s\"",
+        sprintf(buf, "%010u:%02u:\260c%d%s: %s %s%s%s says: \"%s\"",
                 xID,
                 areaID,
                 col,
@@ -578,7 +578,7 @@ static int write_chat(int cn, int channel, char *text) {
                 (ch[cn].flags & CF_STAFF) ? "]" : "",
                 text); // area internal
     } else if (channel == 9) {
-        sprintf(buf, "%010u:%02u:%02u:°c%d%s: %s %s%s%s says: \"%s\"",
+        sprintf(buf, "%010u:%02u:%02u:\260c%d%s: %s %s%s%s says: \"%s\"",
                 xID,
                 areaID,
                 areaM,
@@ -590,7 +590,7 @@ static int write_chat(int cn, int channel, char *text) {
                 (ch[cn].flags & CF_STAFF) ? "]" : "",
                 text); // mirror internal
     } else if (channel == 4) {
-        sprintf(buf, "%010u°c%d%s: %s %s%s%s (%s) says: \"%s\"",
+        sprintf(buf, "%010u\260c%d%s: %s %s%s%s (%s) says: \"%s\"",
                 xID,
                 col,
                 cname[channel].name,
@@ -601,7 +601,7 @@ static int write_chat(int cn, int channel, char *text) {
                 "NW",
                 text); // normal
     } else {
-        sprintf(buf, "%010u°c%d%s: %s %s%s%s says: \"%s\"",
+        sprintf(buf, "%010u\260c%d%s: %s %s%s%s says: \"%s\"",
                 xID,
                 col,
                 cname[channel].name,

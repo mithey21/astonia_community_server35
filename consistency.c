@@ -210,7 +210,7 @@ int consistency_check_chars(void) {
                     if (n == INVENTORYSIZE) ch[cn].citem = 0;
                     else ch[cn].item[n] = 0;
                     ch[cn].flags |= CF_ITEMS;
-                    if (ch[cn].flags & CF_PLAYER) log_char(cn, LOG_SYSTEM, 0, "°c3You encountered a bug (consist1). Your item %s has been removed. Please email game@astonia.com. We apologize for the bug.", it[in].name);
+                    if (ch[cn].flags & CF_PLAYER) log_char(cn, LOG_SYSTEM, 0, "\260c3You encountered a bug (consist1). Your item %s has been removed. Please email game@astonia.com. We apologize for the bug.", it[in].name);
                     err++;
                     continue;
                 }
@@ -221,7 +221,7 @@ int consistency_check_chars(void) {
                     if (n == INVENTORYSIZE) ch[cn].citem = 0;
                     else ch[cn].item[n] = 0;
                     ch[cn].flags |= CF_ITEMS;
-                    if (ch[cn].flags & CF_PLAYER) log_char(cn, LOG_SYSTEM, 0, "°c3You encountered a bug (consist2). Your item %s has been removed. Please email game@astonia.com. We apologize for the bug.", it[in].name);
+                    if (ch[cn].flags & CF_PLAYER) log_char(cn, LOG_SYSTEM, 0, "\260c3You encountered a bug (consist2). Your item %s has been removed. Please email game@astonia.com. We apologize for the bug.", it[in].name);
                     err++;
                     continue;
                 }
@@ -232,7 +232,7 @@ int consistency_check_chars(void) {
                     if (n == INVENTORYSIZE) ch[cn].citem = 0;
                     else ch[cn].item[n] = 0;
                     ch[cn].flags |= CF_ITEMS;
-                    if (ch[cn].flags & CF_PLAYER) log_char(cn, LOG_SYSTEM, 0, "°c3You encountered a bug (consist3). Your item %s has been removed. Please email game@astonia.com. We apologize for the bug.", it[in].name);
+                    if (ch[cn].flags & CF_PLAYER) log_char(cn, LOG_SYSTEM, 0, "\260c3You encountered a bug (consist3). Your item %s has been removed. Please email game@astonia.com. We apologize for the bug.", it[in].name);
                     err++;
                     continue;
                 }
@@ -243,7 +243,7 @@ int consistency_check_chars(void) {
                     if (n == INVENTORYSIZE) ch[cn].citem = 0;
                     else ch[cn].item[n] = 0;
                     ch[cn].flags |= CF_ITEMS;
-                    if (ch[cn].flags & CF_PLAYER) log_char(cn, LOG_SYSTEM, 0, "°c3You encountered a bug (consist4). Your item %s has been removed. Please email game@astonia.com. We apologize for the bug.", it[in].name);
+                    if (ch[cn].flags & CF_PLAYER) log_char(cn, LOG_SYSTEM, 0, "\260c3You encountered a bug (consist4). Your item %s has been removed. Please email game@astonia.com. We apologize for the bug.", it[in].name);
                     err++;
                     continue;
                 }
@@ -271,7 +271,7 @@ int consistency_check_chars(void) {
                     if (n == INVENTORYSIZE) ch[cn].citem = 0;
                     else ch[cn].item[n] = 0;
                     ch[cn].flags |= CF_ITEMS;
-                    if (ch[cn].flags & CF_PLAYER) log_char(cn, LOG_SYSTEM, 0, "°c3You encountered a bug (consist4). Your item %s has been removed. Please email game@astonia.com. We apologize for the bug.", it[in].name);
+                    if (ch[cn].flags & CF_PLAYER) log_char(cn, LOG_SYSTEM, 0, "\260c3You encountered a bug (consist4). Your item %s has been removed. Please email game@astonia.com. We apologize for the bug.", it[in].name);
                     err++;
                     continue;
                 }

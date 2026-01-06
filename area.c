@@ -871,9 +871,9 @@ void walk_section_msg(int cn) {
     if (s != dat->current_section) {
 
         if (s) {
-            log_char(cn, LOG_SYSTEM, 0, "°c1Now entering %s.", section[s].name);
+            log_char(cn, LOG_SYSTEM, 0, "\260c1Now entering %s.", section[s].name);
         } else {
-            log_char(cn, LOG_SYSTEM, 0, "°c1Now leaving %s.", section[dat->current_section].name);
+            log_char(cn, LOG_SYSTEM, 0, "\260c1Now leaving %s.", section[dat->current_section].name);
         }
         dat->current_section = s;
     }

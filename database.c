@@ -1570,7 +1570,7 @@ void tick_login(void) {
 
         newbie = 1;
 
-        sprintf(buf, "0000000000°c17%s°c18, a new player, has entered the game.", login.name);
+        sprintf(buf, "0000000000\260c17%s\260c18, a new player, has entered the game.", login.name);
         server_chat(1, buf);
 
     } else { // existing account, retrieve items
@@ -3572,7 +3572,7 @@ void db_plr_notes(int victimID, int sID) {
             continue;
         }
 
-        if (flag) tell_chat(0, victimID, 1, "°c3Notes, warnings and punishments in the last 28 days:°c0");
+        if (flag) tell_chat(0, victimID, 1, "\260c3Notes, warnings and punishments in the last 28 days:\260c0");
 
         tell_chat(0, victimID, 1, "%s on %02d.%02d.%02d %02d:%02d:%02d",
                   row[2],

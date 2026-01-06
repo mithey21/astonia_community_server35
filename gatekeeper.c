@@ -698,7 +698,7 @@ void gate_fight_dead(int cn, int co) {
         ch[co].value[1][V_RAGE] = 1;
         log_char(co, LOG_SYSTEM, 0, "You are an Arch-Warrior now.");
 
-        sprintf(buf, "0000000000°c10Grats: %s is an Arch-Warrior now!", ch[co].name);
+        sprintf(buf, "0000000000\260c10Grats: %s is an Arch-Warrior now!", ch[co].name);
         server_chat(6, buf);
 
         dlog(co, 0, "turned arch-warrior");
@@ -709,7 +709,7 @@ void gate_fight_dead(int cn, int co) {
         ch[co].value[1][V_DURATION] = 1;
         log_char(co, LOG_SYSTEM, 0, "You are an Arch-Mage now.");
 
-        sprintf(buf, "0000000000°c10Grats: %s is an Arch-Mage now!", ch[co].name);
+        sprintf(buf, "0000000000\260c10Grats: %s is an Arch-Mage now!", ch[co].name);
         server_chat(6, buf);
 
         dlog(co, 0, "turned arch-mage");
@@ -720,7 +720,7 @@ void gate_fight_dead(int cn, int co) {
         ch[co].flags |= CF_ARCH;
         log_char(co, LOG_SYSTEM, 0, "You are an Arch-Seyan'Du now.");
 
-        sprintf(buf, "0000000000°c10Grats: %s is an Arch-Seyan'Du now!", ch[co].name);
+        sprintf(buf, "0000000000\260c10Grats: %s is an Arch-Seyan'Du now!", ch[co].name);
         server_chat(6, buf);
 
         dlog(co, 0, "turned arch-seyan");
@@ -731,7 +731,7 @@ void gate_fight_dead(int cn, int co) {
         turn_seyan(co);
         log_char(co, LOG_SYSTEM, 0, "You are a Seyan'Du now.");
 
-        sprintf(buf, "0000000000°c10Grats: %s is a Seyan'Du now!", ch[co].name);
+        sprintf(buf, "0000000000\260c10Grats: %s is a Seyan'Du now!", ch[co].name);
         server_chat(6, buf);
 
         dlog(co, 0, "turned seyan");
@@ -747,8 +747,8 @@ void labentrance(int in, int cn) {
 
     ret = teleport_next_lab(cn, 1);
     if (ret == 0) log_char(cn, LOG_SYSTEM, 0, "You have solved all existing labyrinths already. You can now fight the gatekeeper.");
-    else if (ret == -1) log_char(cn, LOG_SYSTEM, 0, "°c3The area containing the next labyrinth part is down. Please try again soon.");
-    else if (ret < -1) log_char(cn, LOG_SYSTEM, 0, "°c3You may not enter before reaching level %d.", -ret);
+    else if (ret == -1) log_char(cn, LOG_SYSTEM, 0, "\260c3The area containing the next labyrinth part is down. Please try again soon.");
+    else if (ret < -1) log_char(cn, LOG_SYSTEM, 0, "\260c3You may not enter before reaching level %d.", -ret);
 }
 
 int ch_driver(int nr, int cn, int ret, int lastact) {

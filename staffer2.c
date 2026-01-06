@@ -2016,7 +2016,7 @@ void broklin_driver(int cn, int ret, int lastact) {
                     didsay = 1;
                     break;
                 case 14:
-                    quiet_say(cn, "Which wouldst thou like to trade? °c4thousand gold°c0 for 2500 silver or °c4five thousand silver°c0 for 2000 gold?");
+                    quiet_say(cn, "Which wouldst thou like to trade? \260c4thousand gold\260c0 for 2500 silver or \260c4five thousand silver\260c0 for 2000 gold?");
                     ppd->broklin_state++;
                     didsay = 1;
                     break;
@@ -2028,7 +2028,7 @@ void broklin_driver(int cn, int ret, int lastact) {
                     didsay = 1;
                     break;
                 case 17:
-                    quiet_say(cn, "Which wouldst thou like to trade? °c4thousand gold°c0 for 2500 silver or °c4five thousand silver°c0 for 2000 gold?");
+                    quiet_say(cn, "Which wouldst thou like to trade? \260c4thousand gold\260c0 for 2500 silver or \260c4five thousand silver\260c0 for 2000 gold?");
                     ppd->broklin_state++;
                     didsay = 1;
                     break;

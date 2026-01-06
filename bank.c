@@ -71,7 +71,7 @@ struct qa qa[] = {
     {{"what's", "your", "name", NULL}, NULL, 1},
     {{"what", "is", "your", "name", NULL}, NULL, 1},
     {{"who", "are", "you", NULL}, NULL, 1},
-    {{"account", NULL}, "If thou wantst to open an account, thou must first deposit (°c4explain deposit°c0) some money in it. After that, thou canst inquire for thy balance (°c4explain balance°c0) or withdraw (°c4explain withdraw°c0) money.", 0},
+    {{"account", NULL}, "If thou wantst to open an account, thou must first deposit (\260c4explain deposit\260c0) some money in it. After that, thou canst inquire for thy balance (\260c4explain balance\260c0) or withdraw (\260c4explain withdraw\260c0) money.", 0},
     {{"explain", "deposit", NULL}, "To deposit 38 gold coins for example, just say: 'deposit 38'.", 0},
     {{"explain", "withdraw", NULL}, "To withdraw 38 gold coins for example, just say: 'withdraw 38'.", 0},
     {{"explain", "balance", NULL}, "To inquire about the balance of thine account, just say: 'balance'", 0}};
@@ -265,8 +265,8 @@ void bank_driver(int cn, int ret, int lastact) {
             }
 
             if (!ppd->loaded) quiet_say(cn, "Hello %s! The server could not load thy depot. Please come back later.", ch[co].name);
-            else if (!ppd->gold) quiet_say(cn, "Hello %s! Wouldst thou like to open an °c4account°c0 with the Imperial Bank?", ch[co].name);
-            else quiet_say(cn, "Ah, welcome %s! Thy °c4account°c0 is in good hands with the Imperial Bank.", ch[co].name);
+            else if (!ppd->gold) quiet_say(cn, "Hello %s! Wouldst thou like to open an \260c4account\260c0 with the Imperial Bank?", ch[co].name);
+            else quiet_say(cn, "Ah, welcome %s! Thy \260c4account\260c0 is in good hands with the Imperial Bank.", ch[co].name);
             mem_add_driver(cn, co, 7);
         }
 

@@ -285,7 +285,7 @@ void professor_driver(int cn, int ret, int lastact) {
                 continue;
             }
 
-            say(cn, "Hello %s! I am a professor at Aston University, and I °c4teach°c0 °c4%s°c0.", ch[co].name, prof[dat->nr].name);
+            say(cn, "Hello %s! I am a professor at Aston University, and I \260c4teach\260c0 \260c4%s\260c0.", ch[co].name, prof[dat->nr].name);
             mem_add_driver(cn, co, 7);
         }
 
@@ -297,7 +297,7 @@ void professor_driver(int cn, int ret, int lastact) {
             case 2:
                 switch (dat->quest) {
                 case 0:
-                    say(cn, "If thou wishest to learn the art of the %s, thou must pay %d gold coins and %d profession points. Say °c4learn°c0 if this is thy wish. Thou canst also °c4improve°c0 thy knowledge of this art for the fee of %d gold coins and %d profession points.", prof[dat->nr].name, dat->quest_option, prof[dat->nr].base, dat->improve_cost * prof[dat->nr].step, prof[dat->nr].step);
+                    say(cn, "If thou wishest to learn the art of the %s, thou must pay %d gold coins and %d profession points. Say \260c4learn\260c0 if this is thy wish. Thou canst also \260c4improve\260c0 thy knowledge of this art for the fee of %d gold coins and %d profession points.", prof[dat->nr].name, dat->quest_option, prof[dat->nr].base, dat->improve_cost * prof[dat->nr].step, prof[dat->nr].step);
                     break;
                 default:
                     say(cn, "You've found bug #418a");

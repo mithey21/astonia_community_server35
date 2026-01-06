@@ -626,7 +626,7 @@ void chest_driver(int in, int cn) {
     timeout = (*(unsigned short *)(it[in].drdata + 5)) * 60 * 60;
 
     if (ch[cn].flags & CF_GOD) {
-        log_char(cn, LOG_SYSTEM, 0, "°c1Chest has a respawn time of %d days, %d hours.°c0", timeout / (60 * 60 * 24), (timeout / (60 * 60)) % 24);
+        log_char(cn, LOG_SYSTEM, 0, "\260c1Chest has a respawn time of %d days, %d hours.\260c0", timeout / (60 * 60 * 24), (timeout / (60 * 60)) % 24);
     }
 
     if (ppd->last_access[nr] && ppd->last_access[nr] + timeout > realtime) {
@@ -3001,7 +3001,7 @@ void trader_driver(int cn, int ret, int lastact) {
                 continue;
             }
 
-            quiet_say(cn, "Hello %s! I will work as middleman in any deal you might wish to make with another player. With my °c4help°c0, no one will cheat you. ", ch[co].name);
+            quiet_say(cn, "Hello %s! I will work as middleman in any deal you might wish to make with another player. With my \260c4help\260c0, no one will cheat you. ", ch[co].name);
             talkdir = offset2dx(ch[cn].x, ch[cn].y, ch[co].x, ch[co].y);
             mem_add_driver(cn, co, 7);
         }
@@ -3065,7 +3065,7 @@ void trader_driver(int cn, int ret, int lastact) {
                 strcpy(dat->c1name, ch[co].name);
                 strcpy(dat->c2name, ch[c2].name);
                 dat->timeout = ticker + TICKS * 60 * 3;
-                quiet_say(cn, "I will handle a trade between %s and %s. You have three minutes to complete it. When you are satisfied with the deal, say °c4accept trade°c0. If you wish to stop the deal, say °c4stop trade°c0. You can check the deal with °c4show trade°c0. Just give me the items you want to trade, or say °c4give token°c0 to trade a payment token.", ch[co].name, ch[c2].name);
+                quiet_say(cn, "I will handle a trade between %s and %s. You have three minutes to complete it. When you are satisfied with the deal, say \260c4accept trade\260c0. If you wish to stop the deal, say \260c4stop trade\260c0. You can check the deal with \260c4show trade\260c0. Just give me the items you want to trade, or say \260c4give token\260c0 to trade a payment token.", ch[co].name, ch[c2].name);
                 talkdir = offset2dx(ch[cn].x, ch[cn].y, ch[co].x, ch[co].y);
             }
 
@@ -3137,11 +3137,11 @@ void trader_driver(int cn, int ret, int lastact) {
                     continue;
                 }
 
-                log_char(co, LOG_SYSTEM, 0, "°c3Trading:");
+                log_char(co, LOG_SYSTEM, 0, "\260c3Trading:");
                 for (n = 0; n < dat->c1cnt; n++) look_item(co, it + dat->c1itm[n]);
                 log_char(co, LOG_SYSTEM, 0, "%d payment tokens", dat->c1token);
 
-                log_char(co, LOG_SYSTEM, 0, "°c3For:");
+                log_char(co, LOG_SYSTEM, 0, "\260c3For:");
                 for (n = 0; n < dat->c2cnt; n++) look_item(co, it + dat->c2itm[n]);
                 log_char(co, LOG_SYSTEM, 0, "%d payment tokens", dat->c2token);
             }
@@ -3183,13 +3183,13 @@ void trader_driver(int cn, int ret, int lastact) {
                     dat->c1token++;
 
                     c2 = find_char_byID(dat->c2ID);
-                    if (c2) log_char(c2, LOG_SYSTEM, 0, "°c2%s gave the trader a payment token, for a total of %d tokens.", ch[co].name, dat->c1token);
+                    if (c2) log_char(c2, LOG_SYSTEM, 0, "\260c2%s gave the trader a payment token, for a total of %d tokens.", ch[co].name, dat->c1token);
                     log_char(co, LOG_SYSTEM, 0, "You gave one token to the trader.");
                     dlog(co, 0, "gave payment token to trader for trade with %s", dat->c2name);
                 } else {
                     dat->c2token++;
                     c2 = find_char_byID(dat->c1ID);
-                    if (c2) log_char(c2, LOG_SYSTEM, 0, "°c2%s gave the trader a payment token, for a total of %d tokens.", ch[co].name, dat->c2token);
+                    if (c2) log_char(c2, LOG_SYSTEM, 0, "\260c2%s gave the trader a payment token, for a total of %d tokens.", ch[co].name, dat->c2token);
                     log_char(co, LOG_SYSTEM, 0, "You gave one token to the trader.");
                     dlog(co, 0, "gave payment token to trader for trade with %s", dat->c1name);
                 }
@@ -3229,7 +3229,7 @@ void trader_driver(int cn, int ret, int lastact) {
                     it[ch[cn].citem].flags |= IF_VOID;
                     c2 = find_char_byID(dat->c2ID);
                     if (c2) {
-                        log_char(c2, LOG_SYSTEM, 0, "°c2%s gave the trader:", ch[co].name);
+                        log_char(c2, LOG_SYSTEM, 0, "\260c2%s gave the trader:", ch[co].name);
                         look_item(c2, it + ch[cn].citem);
                     }
                     ch[cn].citem = 0;
@@ -3247,7 +3247,7 @@ void trader_driver(int cn, int ret, int lastact) {
                     it[ch[cn].citem].flags |= IF_VOID;
                     c2 = find_char_byID(dat->c1ID);
                     if (c2) {
-                        log_char(c2, LOG_SYSTEM, 0, "°c2%s gave the trader:", ch[co].name);
+                        log_char(c2, LOG_SYSTEM, 0, "\260c2%s gave the trader:", ch[co].name);
                         look_item(c2, it + ch[cn].citem);
                     }
                     ch[cn].citem = 0;
@@ -3969,7 +3969,7 @@ void sign(int in, int cn) {
     switch (nr) {
     case 0:
         log_char(cn, LOG_SYSTEM, 0, "Welcome to Long Tunnels");
-        log_char(cn, LOG_SYSTEM, 0, "°c3No potions can be consumed and hitpoints can not be healed here. Mages will have no magic shield. Level 10 or better!°c0");
+        log_char(cn, LOG_SYSTEM, 0, "\260c3No potions can be consumed and hitpoints can not be healed here. Mages will have no magic shield. Level 10 or better!\260c0");
         break;
     }
 }

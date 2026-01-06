@@ -31,22 +31,22 @@ int swearing(int cn, char *text) {
     if (ch[cn].flags & CF_GOD) return 0;
 
     if (realtime - ppd->bad < 30) {
-        log_char(cn, LOG_SYSTEM, 0, "°c3Chat is blocked.");
+        log_char(cn, LOG_SYSTEM, 0, "\260c3Chat is blocked.");
         return 1;
     }
 
     if (realtime - ppd->lasttalk[1] < 1) { // 0.3s per line
-        log_char(cn, LOG_SYSTEM, 0, "°c3Chat has been blocked for 30 seconds for excessive usage (1).");
+        log_char(cn, LOG_SYSTEM, 0, "\260c3Chat has been blocked for 30 seconds for excessive usage (1).");
         ppd->bad = realtime;
         return 1;
     }
     if (realtime - ppd->lasttalk[4] < 10) { // 2s per line
-        log_char(cn, LOG_SYSTEM, 0, "°c3Chat has been blocked for 30 seconds for excessive usage (2).");
+        log_char(cn, LOG_SYSTEM, 0, "\260c3Chat has been blocked for 30 seconds for excessive usage (2).");
         ppd->bad = realtime;
         return 1;
     }
     if (realtime - ppd->lasttalk[9] < 30) { // 3s per line
-        log_char(cn, LOG_SYSTEM, 0, "°c3Chat has been blocked for 30 seconds for excessive usage (3).");
+        log_char(cn, LOG_SYSTEM, 0, "\260c3Chat has been blocked for 30 seconds for excessive usage (3).");
         ppd->bad = realtime;
         return 1;
     }

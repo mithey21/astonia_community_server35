@@ -1318,7 +1318,7 @@ void strategy_boss(int cn, int ret, int lastact) {
                     break;
                 case 10:
                     if (ppd->boss_exp > 0) {
-                        say(cn, "Ah, %s. You made some progress defeating Islena's Lieutenants, and I have orders to reward you. Do you prefer °c4military rank°c0 or °c4levels and experience°c0?", ch[co].name);
+                        say(cn, "Ah, %s. You made some progress defeating Islena's Lieutenants, and I have orders to reward you. Do you prefer \260c4military rank\260c0 or \260c4levels and experience\260c0?", ch[co].name);
                         ppd->boss_stage++;
                         ppd->boss_msg_exp = ppd->boss_exp;
                     }
@@ -3029,7 +3029,7 @@ int special_driver(int nr, int cn, char *ptr) {
                 return 2;
             }
 
-            log_char(cn, LOG_SYSTEM, 0, "°c3Nr \002Name \005Busy \007Solved \013Enemies ");
+            log_char(cn, LOG_SYSTEM, 0, "\260c3Nr \002Name \005Busy \007Solved \013Enemies ");
             for (n = 0; n < ARRAYSIZE(mission); n++) {
                 if (mission[n].need_solve && !ppd->solve_cnt[mission[n].need_solve] && !ppd->solve_cnt[mission[n].need_solve2]) continue;
                 if (mission[n].set_solve && ppd->solve_cnt[mission[n].set_solve] >= MAXMISSIONTRY) continue;
@@ -3041,7 +3041,7 @@ int special_driver(int nr, int cn, char *ptr) {
                     if (area[mission[n].area].q_playerID[m] == ch[cn].ID) self = cnt;
                 }
 
-                log_char(cn, LOG_SYSTEM, 0, "°c2 %d \002%s \006%d%c%c \010%d \013%s %s %s %s",
+                log_char(cn, LOG_SYSTEM, 0, "\260c2 %d \002%s \006%d%c%c \010%d \013%s %s %s %s",
                          n + 1,
                          mission[n].name,
                          area[mission[n].area].busy + cnt,

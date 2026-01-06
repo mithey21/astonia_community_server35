@@ -222,10 +222,10 @@ struct qa qa[] = {
     {{"hail", NULL}, "And hail to you, %s!", 0},
     {{"what's", "up", NULL}, "Everything that isn't nailed down.", 0},
     {{"what", "is", "up", NULL}, "Everything that isn't nailed down.", 0},
-    {{"wizard", NULL}, "The Wizard of Yendor was fascinated by the Labyrinth created by Ishtar and spent his life building an imitation of it. Before his death, he transfered all his magical energies into various °c4shrines°c0 he hid in his dungeons. With the Wizard no longer around, I take care of these °c4dungeons°c0.", 0},
+    {{"wizard", NULL}, "The Wizard of Yendor was fascinated by the Labyrinth created by Ishtar and spent his life building an imitation of it. Before his death, he transfered all his magical energies into various \260c4shrines\260c0 he hid in his dungeons. With the Wizard no longer around, I take care of these \260c4dungeons\260c0.", 0},
     {{"shrines", NULL}, "Unfortunately, the Wizard had a peculiar sense of humor, and some of his shrines do strange things to those who use them. Do look at them before thou usest them, and decide carefully.", 0},
     {{"yendor", NULL}, "No one really knows where the name 'Yendor' stems from. But rumor has it that the Wizard's name used to be 'Rodney', before he changed it to 'The Wizard of Yendor'.", 0},
-    {{"dungeons", NULL}, "The Wizard of Yendor created 99 different dungeons, but the first nine have collapsed. The remaining dungeons are of the levels 10 to 99. Thou canst ask me for °c4help°c0 if thou wishest to enter one of them.", 0},
+    {{"dungeons", NULL}, "The Wizard of Yendor created 99 different dungeons, but the first nine have collapsed. The remaining dungeons are of the levels 10 to 99. Thou canst ask me for \260c4help\260c0 if thou wishest to enter one of them.", 0},
     {{"help", NULL}, NULL, 2},
     {{"list", NULL}, NULL, 3},
     {{"reset", NULL}, NULL, 4}};
@@ -1253,7 +1253,7 @@ void create_dungeon(int cn, int co, int level, struct master_data *dat) {
 
     for (n = 0; n < 16; n++) {
         if (dat->owner[n] == ch[co].ID) {
-            say(cn, "You have created a dungeon already, you may not create another one before the first one has collapsed. You can use °c4destroy %d°c0 to collapse it now.", n + 1);
+            say(cn, "You have created a dungeon already, you may not create another one before the first one has collapsed. You can use \260c4destroy %d\260c0 to collapse it now.", n + 1);
             return;
         }
     }
@@ -1400,7 +1400,7 @@ void randommaster(int cn, int ret, int lastact) {
                 continue;
             }
 
-            say(cn, "Hello %s! Welcome to the dungeons of the °c4Wizard°c0 of °c4Yendor°c0!", ch[co].name);
+            say(cn, "Hello %s! Welcome to the dungeons of the \260c4Wizard\260c0 of \260c4Yendor\260c0!", ch[co].name);
             mem_add_driver(cn, co, 7);
         }
 

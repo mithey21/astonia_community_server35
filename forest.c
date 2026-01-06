@@ -427,7 +427,7 @@ void william_driver(int cn, int ret, int lastact) {
                     didsay = 1;
                     break;
                 case 1:
-                    say(cn, "The °c4imp°c0 asked me to tell you to go east and then northeast and hunt some bears.");
+                    say(cn, "The \260c4imp\260c0 asked me to tell you to go east and then northeast and hunt some bears.");
                     ppd->william_state++;
                     didsay = 1;
                     break;
@@ -438,7 +438,7 @@ void william_driver(int cn, int ret, int lastact) {
                         ppd->william_state = 7;
                         break;
                     }
-                    say(cn, "Ah, hello %s. The °c4imp°c0 told me thou hast done him a favor. That's nice of thee.", ch[co].name);
+                    say(cn, "Ah, hello %s. The \260c4imp\260c0 told me thou hast done him a favor. That's nice of thee.", ch[co].name);
                     questlog_open(co, 23);
                     ppd->william_state++;
                     didsay = 1;

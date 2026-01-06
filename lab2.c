@@ -154,28 +154,28 @@ void lab2_herald_driver(int cn, int ret, int lastact) {
 
             switch (ppd->herald_talkstep) {
             case 0: // INTRO
-                say(cn, "Hello %s. I am Herald, the Keeper of this graveyard. I can't say how glad I am to see thee here. I assume thou wantst to pass this test. I need thine help urgently. Horrible things happen here, as thou hast probably noticed. I don't dare to leave the chapel since the dead are rising from their graves. °c4Arathas°c0 has caused this abomination, may his soul rest in peace.", ch[co].name);
+                say(cn, "Hello %s. I am Herald, the Keeper of this graveyard. I can't say how glad I am to see thee here. I assume thou wantst to pass this test. I need thine help urgently. Horrible things happen here, as thou hast probably noticed. I don't dare to leave the chapel since the dead are rising from their graves. \260c4Arathas\260c0 has caused this abomination, may his soul rest in peace.", ch[co].name);
                 didsay = 1;
                 ppd->herald_talkstep++;
                 dat->next_talk = ticker + 10 * TICKS;
                 break;
 
             case 1:
-                say(cn, "If thou wishest to help me, kill °c4Arathas°c0. Bring me his ring as proof, and I will open thee a gate leading out of this part of the Labyrinth.");
+                say(cn, "If thou wishest to help me, kill \260c4Arathas\260c0. Bring me his ring as proof, and I will open thee a gate leading out of this part of the Labyrinth.");
                 didsay = 1;
                 ppd->herald_talkstep = 255;
                 dat->next_talk = ticker + 10 * TICKS;
                 break;
 
             case 10: // ARATHAS
-                say(cn, "I don't know much about him. I just started to read what °c4Elias°c0, his brother, wrote in his °c4diary°c0 when the skeletons attacked me in my study. I'm lucky I got out alive. Now I'm hiding here in the chapel. The undeads dare not enter it.");
+                say(cn, "I don't know much about him. I just started to read what \260c4Elias\260c0, his brother, wrote in his \260c4diary\260c0 when the skeletons attacked me in my study. I'm lucky I got out alive. Now I'm hiding here in the chapel. The undeads dare not enter it.");
                 didsay = 1;
                 ppd->herald_talkstep++;
                 dat->next_talk = ticker + 10 * TICKS;
                 break;
 
             case 11:
-                say(cn, "But thou wished to hear about Arathas. He and his brother stem from a family of well renowed mages. They have their own °c4family vault°c0 on this graveyard. Arathas died during some kind of magical experiment, and he was buried in the family vault a long time ago.");
+                say(cn, "But thou wished to hear about Arathas. He and his brother stem from a family of well renowed mages. They have their own \260c4family vault\260c0 on this graveyard. Arathas died during some kind of magical experiment, and he was buried in the family vault a long time ago.");
                 didsay = 1;
                 ppd->herald_talkstep = 255;
                 dat->next_talk = ticker + 10 * TICKS;
@@ -189,7 +189,7 @@ void lab2_herald_driver(int cn, int ret, int lastact) {
                 break;
 
             case 21:
-                say(cn, "One day he entered the family vault. But he did not return, and after a while, his relatives divided his belongings among them. By now, they are all dead, too, and rest in this graveyard. If things were different, I'd show thee their graves, but with the undeads about I do not dare. Thou couldst check the books yourself, for the locations of their tombs. They are in the °c4administrative building°c0. But beware, lots of skeletons and undeads are there, too.");
+                say(cn, "One day he entered the family vault. But he did not return, and after a while, his relatives divided his belongings among them. By now, they are all dead, too, and rest in this graveyard. If things were different, I'd show thee their graves, but with the undeads about I do not dare. Thou couldst check the books yourself, for the locations of their tombs. They are in the \260c4administrative building\260c0. But beware, lots of skeletons and undeads are there, too.");
                 didsay = 1;
                 ppd->herald_talkstep = 255;
                 dat->next_talk = ticker + 10 * TICKS;
@@ -210,7 +210,7 @@ void lab2_herald_driver(int cn, int ret, int lastact) {
                 break;
 
             case 50: // DIARY
-                say(cn, "I left the diary in my rooms, in the north-eastern part of the °c4administrative building°c0. I left it there, in my study, when I fled from the undeads.");
+                say(cn, "I left the diary in my rooms, in the north-eastern part of the \260c4administrative building\260c0. I left it there, in my study, when I fled from the undeads.");
                 didsay = 1;
                 ppd->herald_talkstep = 255;
                 dat->next_talk = ticker + 5 * TICKS;

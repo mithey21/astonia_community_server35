@@ -284,7 +284,7 @@ void monk_gatama_driver(int cn, int ret, int lastact) {
                 ppd->gatamastate++;
                 break;
             case 11:
-                say(cn, "Thou might want to know more °c4details°c0 of what thee can do for the monastery. After this, thou might °c4begin°c0 helping us, or not.");
+                say(cn, "Thou might want to know more \260c4details\260c0 of what thee can do for the monastery. After this, thou might \260c4begin\260c0 helping us, or not.");
                 didsay = 1;
                 ppd->gatamastate++;
                 break;
@@ -307,7 +307,7 @@ void monk_gatama_driver(int cn, int ret, int lastact) {
                 ppd->gatamastate++;
                 break;
             case 22:
-                say(cn, "Hopefully thou now decide to °c4begin°c0 helping us.");
+                say(cn, "Hopefully thou now decide to \260c4begin\260c0 helping us.");
                 didsay = 1;
                 ppd->gatamastate++;
                 break;
@@ -446,7 +446,7 @@ void monk_worker_driver(int cn, int ret, int lastact) {
     }
 
     if (char_dist(cn, workerdat->follow_cn) > 90) {
-        log_char(workerdat->follow_cn, LOG_SYSTEM, 0, "°c3One of thine monks vanished!°c0");
+        log_char(workerdat->follow_cn, LOG_SYSTEM, 0, "\260c3One of thine monks vanished!\260c0");
         remove_destroy_char(cn);
         return;
     }
@@ -565,7 +565,7 @@ void monk_worker_driver(int cn, int ret, int lastact) {
 void monk_worker_died_driver(int cn, int co) {
     struct saltmine_worker_data *workerdat;
     if (!(workerdat = set_data(cn, DRD_SALTMINE_WORKER, sizeof(struct saltmine_worker_data)))) return;
-    log_char(workerdat->follow_cn, LOG_SYSTEM, 0, "°c3One of thine monks died!°c0");
+    log_char(workerdat->follow_cn, LOG_SYSTEM, 0, "\260c3One of thine monks died!\260c0");
 }
 
 // -- item driver ---------------------------------------------------------------------------------------------------

@@ -384,7 +384,7 @@ void guard_driver(int cn, int ret, int lastact) {
                     dat->last_y = ch[co].y;
                     dat->last_co = co;
                     if (dat->fine_state == 0) {
-                        say(cn, "Hey, %s, you owe the city %.2fG! Say °c4pay°c0 to pay it!", ch[co].name, ppd->legal_fine / 100.0);
+                        say(cn, "Hey, %s, you owe the city %.2fG! Say \260c4pay\260c0 to pay it!", ch[co].name, ppd->legal_fine / 100.0);
                         dat->fine_state = 1;
                         dat->fine_timeout = ticker;
                         dat->lastsay = ticker;
@@ -393,7 +393,7 @@ void guard_driver(int cn, int ret, int lastact) {
                     }
                     if (dat->fine_state == 1) {
                         if (dat->lastsay + TICKS * 15 < ticker) {
-                            say(cn, "Come on, %s, °c4pay°c0 or I'll have to kill you!", ch[co].name);
+                            say(cn, "Come on, %s, \260c4pay\260c0 or I'll have to kill you!", ch[co].name);
                             dat->lastsay = ticker;
                         }
                         if (dat->fine_timeout + TICKS * 60 < ticker) {
@@ -507,7 +507,7 @@ void guard_driver(int cn, int ret, int lastact) {
                     if (ppd->citizen_status == CS_GUEST) {
                         say(cn, "We do not allow strangers to commit any crime here. Leave at once!");
                         ppd->citizen_status = CS_ENEMY;
-                    } else say(cn, "Hey %s! Fine for attacking a city guard: 20G! Say °c4pay°c0 to pay it!", ch[co].name);
+                    } else say(cn, "Hey %s! Fine for attacking a city guard: 20G! Say \260c4pay\260c0 to pay it!", ch[co].name);
                     //charlog(cn,"fine for %s (1): 20G",ch[co].name);
                 }
                 ppd->last_attack = realtime;
@@ -523,7 +523,7 @@ void guard_driver(int cn, int ret, int lastact) {
                     if (ppd->citizen_status == CS_GUEST) {
                         say(cn, "Protect the innocent! We do not allow strangers to commit any crime here. Leave at once!");
                         ppd->citizen_status = CS_ENEMY;
-                    } else say(cn, "Protect the innocent! Stop at once and °c4pay°c0 your fine, %s!", ch[cc].name);
+                    } else say(cn, "Protect the innocent! Stop at once and \260c4pay\260c0 your fine, %s!", ch[cc].name);
                     //charlog(cn,"fine for %s (2): 75G",ch[cc].name);
                 }
                 if (ticker - dat->nofight_timer > TICKS * 3) fight_driver_add_enemy(cn, cc, 1, 1);
@@ -715,10 +715,10 @@ void barkeeper(int cn, int ret, int lastact) {
                 case 1:
                     if (ppd->citizen_status < CS_GUEST || ppd->legal_status == LS_DEAD) {
                         if (ppd->legal_status == LS_FINE) {
-                            say(cn, "If thou needst go into Exkordon, I can help thee. Wouldst thou like to buy a guest pass? (°c4buy pass°c0 for 150G and pay %dG fines, for a total of %dG)", ppd->legal_fine / 100, ppd->legal_fine / 100 + 150);
+                            say(cn, "If thou needst go into Exkordon, I can help thee. Wouldst thou like to buy a guest pass? (\260c4buy pass\260c0 for 150G and pay %dG fines, for a total of %dG)", ppd->legal_fine / 100, ppd->legal_fine / 100 + 150);
                         } else if (ppd->legal_status == LS_DEAD) {
-                            say(cn, "If thou needst go into Exkordon, I can help thee. But since thou hast killed the governor's double, it will be expensive. Wouldst thou like to buy a guest pass and the guard's forgiveness? (°c4buy pass°c0 for 2500G)");
-                        } else say(cn, "If thou needst go into Exkordon, I can help thee. Wouldst thou like to buy a guest pass? (°c4buy pass°c0 for 150G)");
+                            say(cn, "If thou needst go into Exkordon, I can help thee. But since thou hast killed the governor's double, it will be expensive. Wouldst thou like to buy a guest pass and the guard's forgiveness? (\260c4buy pass\260c0 for 2500G)");
+                        } else say(cn, "If thou needst go into Exkordon, I can help thee. Wouldst thou like to buy a guest pass? (\260c4buy pass\260c0 for 150G)");
                         ppd->barkeeper_state++;
                         didsay = 1;
                         ppd->barkeeper_last = realtime;
@@ -892,7 +892,7 @@ void servant(int cn, int ret, int lastact) {
                     if (dat->nr == 4) {
                         say(cn, "Now, what do we have here? I do not think thine presence here is appropriate. GUARDS!");
                         call_guard(cn, co);
-                    } else say(cn, "Uh, hello, %s. Thou art not supposed to be here. (°c4chat°c0 °c4bribe°c0 °c4threaten°c0)", ch[co].name);
+                    } else say(cn, "Uh, hello, %s. Thou art not supposed to be here. (\260c4chat\260c0 \260c4bribe\260c0 \260c4threaten\260c0)", ch[co].name);
                     dat->current_state++;
                     didsay = 1;
                     break;
@@ -904,7 +904,7 @@ void servant(int cn, int ret, int lastact) {
                 } else {
                     switch (dat->current_state) {
                     case 0:
-                        say(cn, "My greetings, %s. How may I serve you? (°c4chat°c0 °c4bribe°c0 °c4threaten°c0)", ch[co].name);
+                        say(cn, "My greetings, %s. How may I serve you? (\260c4chat\260c0 \260c4bribe\260c0 \260c4threaten\260c0)", ch[co].name);
                         dat->current_state++;
                         didsay = 1;
                         break;
@@ -963,24 +963,24 @@ void servant(int cn, int ret, int lastact) {
             case 9: // bribe
                 switch (dat->nr) {
                 case 0:
-                    say(cn, "It is nice of thee to offer money, and I could use it, oh yes, I could, but I cannot give thee anything in return. (°c4pay bribe°c0 of 20G)");
+                    say(cn, "It is nice of thee to offer money, and I could use it, oh yes, I could, but I cannot give thee anything in return. (\260c4pay bribe\260c0 of 20G)");
                     didsay = 1;
                     break;
                 case 1:
-                    say(cn, "Listen, %s, I know of a secret passage, which connects two store rooms. Thou couldst use it to avoid the guards. I even have the key, which unlocks this door. (°c4pay bribe°c0 of 50G)", ch[co].name);
+                    say(cn, "Listen, %s, I know of a secret passage, which connects two store rooms. Thou couldst use it to avoid the guards. I even have the key, which unlocks this door. (\260c4pay bribe\260c0 of 50G)", ch[co].name);
                     didsay = 1;
                     break;
                 case 2:
-                    if (ch[co].flags & CF_MALE) say(cn, "Thou art most handsome, %s. For a kiss, I would tell thee how thou canst reach the governor's private rooms through a secret passage. (°c4pay bribe°c0 - a kiss)", ch[co].name);
+                    if (ch[co].flags & CF_MALE) say(cn, "Thou art most handsome, %s. For a kiss, I would tell thee how thou canst reach the governor's private rooms through a secret passage. (\260c4pay bribe\260c0 - a kiss)", ch[co].name);
                     else say(cn, "Thou darest offer me money? Thou art most common, wench.");
                     didsay = 1;
                     break;
                 case 3:
-                    say(cn, "Well, there is something I could tell thee, %s, which thou mightst find worth thy money. (°c4pay bribe°c0 of 50G)", ch[co].name);
+                    say(cn, "Well, there is something I could tell thee, %s, which thou mightst find worth thy money. (\260c4pay bribe\260c0 of 50G)", ch[co].name);
                     didsay = 1;
                     break;
                 case 5:
-                    say(cn, "Ah, money. Money is always welcome! (°c4pay bribe°c0 of 20G)");
+                    say(cn, "Ah, money. Money is always welcome! (\260c4pay bribe\260c0 of 20G)");
                     didsay = 1;
                     break;
                 }
@@ -1360,7 +1360,7 @@ void thiefguard(int cn, int ret, int lastact) {
                     didsay = 1;
                     break;
                 case 1:
-                    say(cn, "...unless thou wert to become a member. If this is thy wish, thou wilt have to °c4pay a fee°c0 of 100G.");
+                    say(cn, "...unless thou wert to become a member. If this is thy wish, thou wilt have to \260c4pay a fee\260c0 of 100G.");
                     ppd->thief_state++;
                     didsay = 1;
                     break;
@@ -1554,13 +1554,13 @@ void thiefmaster(int cn, int ret, int lastact) {
                     didsay = 1;
                     break;
                 case 8:
-                    say(cn, "If thou thinkst thou hast killed enough robbers, come back here and say: °c4I am done°c0");
+                    say(cn, "If thou thinkst thou hast killed enough robbers, come back here and say: \260c4I am done\260c0");
                     ppd->thief_state++;
                     didsay = 1;
                     break;
                 case 9: // waiting for robber mission to finish
                     if (realtime - ppd->thief_last_seen > 60 * 2) {
-                        say(cn, "Well, art thou done, %s? (°c4I am done°c0)", ch[co].name);
+                        say(cn, "Well, art thou done, %s? (\260c4I am done\260c0)", ch[co].name);
                         didsay = 1;
                     }
                     break;
@@ -2265,7 +2265,7 @@ void bookcase(int in, int cn) {
         }
     }
 
-    log_char(cn, LOG_SYSTEM, 0, "°c2%s.°c0 %s", name, text);
+    log_char(cn, LOG_SYSTEM, 0, "\260c2%s.\260c0 %s", name, text);
 }
 
 void colortile(int in, int cn) {

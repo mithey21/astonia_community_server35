@@ -230,7 +230,7 @@ static int cmd_complain(int cn, char *ptr) {
     }
 
     if (!ppd->complaint_date) {
-        log_char(cn, LOG_SYSTEM, 0, "°c3Complaints are meant as a way to complain about verbal attacks by another player, or to report a scam. If you wish to complain about something else, please email game@astonia.com. No complaint has been sent. Repeat the command if you still want to send your complaint.");
+        log_char(cn, LOG_SYSTEM, 0, "\260c3Complaints are meant as a way to complain about verbal attacks by another player, or to report a scam. If you wish to complain about something else, please email game@astonia.com. No complaint has been sent. Repeat the command if you still want to send your complaint.");
         ppd->complaint_date = 1;
         return 1;
     }
@@ -311,12 +311,12 @@ static int cmd_exterminate(int cn, char *ptr) // 1=OK, 0=repeat
 
     sprintf(buf, "%s banned for %s by %s (%s)", realname, reason, ch[cn].name, ch[cn].staff_code);
     exterminate(ch[cn].ID, uID, buf);
-    tell_chat(0, uID, 1, "°c3You have been banned for %s.", reason);
+    tell_chat(0, uID, 1, "\260c3You have been banned for %s.", reason);
 
     sprintf(buf, "NW: Punishment note from %s (%s), %s exterminated for %s", ch[cn].name, ch[cn].staff_code, realname, reason);
     write_scrollback(ch[cn].player, cn, buf, ch[cn].name, name);
 
-    sprintf(buf, "0000000000°c03Punishment: %s (%s) scheduled exterminate for %s, reason: %s.", ch[cn].name, ch[cn].staff_code, name, reason);
+    sprintf(buf, "0000000000\260c03Punishment: %s (%s) scheduled exterminate for %s, reason: %s.", ch[cn].name, ch[cn].staff_code, name, reason);
     server_chat(31, buf);
 
     summary("exterminates", 0);
@@ -359,12 +359,12 @@ static int cmd_punish(int cn, char *ptr) // 1=OK, 0=repeat
 
     sprintf(buf, "%s punished for %s by %s (%s)", realname, reason, ch[cn].name, ch[cn].staff_code);
     punish(ch[cn].ID, uID, buf);
-    tell_chat(0, uID, 1, "°c3You have been punished for %s. You have lost karma, and you will get banned as a result of your punishment. The first few times the ban will be temporary, but eventually it will be permanent.", reason);
+    tell_chat(0, uID, 1, "\260c3You have been punished for %s. You have lost karma, and you will get banned as a result of your punishment. The first few times the ban will be temporary, but eventually it will be permanent.", reason);
 
     sprintf(buf, "NW: Punishment note from %s (%s), %s punished for %s", ch[cn].name, ch[cn].staff_code, realname, reason);
     write_scrollback(ch[cn].player, cn, buf, ch[cn].name, name);
 
-    sprintf(buf, "0000000000°c03Punishment: %s (%s) scheduled punishment for %s, reason: %s.", ch[cn].name, ch[cn].staff_code, name, reason);
+    sprintf(buf, "0000000000\260c03Punishment: %s (%s) scheduled punishment for %s, reason: %s.", ch[cn].name, ch[cn].staff_code, name, reason);
     server_chat(31, buf);
 
     summary("punishments", 0);
@@ -407,12 +407,12 @@ static int cmd_warn(int cn, char *ptr) // 1=OK, 0=repeat
 
     sprintf(buf, "%s warned for %s by %s (%s)", realname, reason, ch[cn].name, ch[cn].staff_code);
     warn(ch[cn].ID, uID, buf);
-    tell_chat(0, uID, 1, "°c3You have been warned for %s. Further offenses will result in you getting karma and, eventually, banned.", reason);
+    tell_chat(0, uID, 1, "\260c3You have been warned for %s. Further offenses will result in you getting karma and, eventually, banned.", reason);
 
     sprintf(buf, "NW: Warning note from %s (%s), %s warned for %s", ch[cn].name, ch[cn].staff_code, realname, reason);
     write_scrollback(ch[cn].player, cn, buf, ch[cn].name, name);
 
-    sprintf(buf, "0000000000°c03Warning: %s (%s) scheduled warning for %s, reason: %s.", ch[cn].name, ch[cn].staff_code, name, reason);
+    sprintf(buf, "0000000000\260c03Warning: %s (%s) scheduled warning for %s, reason: %s.", ch[cn].name, ch[cn].staff_code, name, reason);
     server_chat(31, buf);
 
     summary("warnings", 0);
@@ -657,7 +657,7 @@ static int cmd_tell(int cn, char *ptr) {
 
     register_sent_tell(cn, uID);
 
-    tell_chat(ch[cn].ID, uID, (ch[cn].flags & (CF_STAFF | CF_GOD)) ? 1 : 0, "°c17%s°c18%s%s%s (%d) tells you: \"%s\"",
+    tell_chat(ch[cn].ID, uID, (ch[cn].flags & (CF_STAFF | CF_GOD)) ? 1 : 0, "\260c17%s\260c18%s%s%s (%d) tells you: \"%s\"",
               sname,
               (ch[cn].flags & CF_STAFF) ? " [" : "",
               (ch[cn].flags & CF_STAFF) ? ch[cn].staff_code : "",
@@ -994,7 +994,7 @@ static void cmd_help(int cn) {
     log_char(cn, LOG_SYSTEM, 0, "/wimp - wimp out of an Live Quest");
 
     if (ch[cn].flags & CF_STAFF) {
-        log_char(cn, LOG_SYSTEM, 0, "°c3Staff Commands:");
+        log_char(cn, LOG_SYSTEM, 0, "\260c3Staff Commands:");
         log_char(cn, LOG_SYSTEM, 0, "/exterminate <name> <reason> - lock account immediately");
         log_char(cn, LOG_SYSTEM, 0, "/jump <name> <mirror>");
         log_char(cn, LOG_SYSTEM, 0, "/klog - karma log");
@@ -1006,7 +1006,7 @@ static void cmd_help(int cn) {
     }
 
     if (ch[cn].flags & CF_GOD) {
-        log_char(cn, LOG_SYSTEM, 0, "°c3God Commands:");
+        log_char(cn, LOG_SYSTEM, 0, "\260c3God Commands:");
         log_char(cn, LOG_SYSTEM, 0, "/goto <x> <y> [area] [mirror]");
         log_char(cn, LOG_SYSTEM, 0, "/summon <name>");
         log_char(cn, LOG_SYSTEM, 0, "/create <name>");
@@ -1197,7 +1197,7 @@ void demontest(int cn, char *ptr) {
 }
 
 void show_lostconppd(int cn, struct lostcon_ppd *ppd) {
-    log_char(cn, LOG_SYSTEM, 0, "°c5Lag Control Settings:");
+    log_char(cn, LOG_SYSTEM, 0, "\260c5Lag Control Settings:");
 
     log_char(cn, LOG_SYSTEM, 0, "Max. Lag [/MAXLAG]: %d sec.", ppd->maxlag);
 
@@ -1208,11 +1208,11 @@ void show_lostconppd(int cn, struct lostcon_ppd *ppd) {
     log_char(cn, LOG_SYSTEM, 0, "Don't use Warcry [/NOWARCRY]: %s.", ppd->nowarcry ? "On" : "Off");
     log_char(cn, LOG_SYSTEM, 0, "Don't use Magic Shield [/NOSHIELD]: %s.", ppd->noshield ? "On" : "Off");
 
-    log_char(cn, LOG_SYSTEM, 0, "°c5Automation Settings:");
+    log_char(cn, LOG_SYSTEM, 0, "\260c5Automation Settings:");
     if (ch[cn].value[1][V_BLESS]) log_char(cn, LOG_SYSTEM, 0, "Automatic Re-Bless [/AUTOBLESS]: %s.", ppd->autobless ? "On" : "Off");
     log_char(cn, LOG_SYSTEM, 0, "Automatic Turning [/AUTOTURN]: %s.", ppd->autoturn ? "On" : "Off");
 
-    log_char(cn, LOG_SYSTEM, 0, "°c5Protection Settings:");
+    log_char(cn, LOG_SYSTEM, 0, "\260c5Protection Settings:");
     log_char(cn, LOG_SYSTEM, 0, "Don't move when fighting back [/NOMOVE]: %s.", (ch[cn].flags & CF_NOMOVE) ? "Yes" : "No");
 }
 
@@ -2387,7 +2387,7 @@ int command(int cn, char *ptr) // 1=ok, 0=repeat
         struct depot_ppd *depot_ppd;
 
         if ((ppd = set_data(cn, DRD_LOSTCON_PPD, sizeof(struct lostcon_ppd)))) show_lostconppd(cn, ppd);
-        log_char(cn, LOG_SYSTEM, 0, "°c5Account Status:");
+        log_char(cn, LOG_SYSTEM, 0, "\260c5Account Status:");
         log_char(cn, LOG_SYSTEM, 0, "Standard Account");
 
         if ((depot_ppd = set_data(cn, DRD_DEPOT_PPD, sizeof(struct depot_ppd)))) {

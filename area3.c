@@ -1276,14 +1276,14 @@ void sir_jones_driver(int cn, int ret, int lastact) {
                     didsay = 1;
                     break;
                 case 4:
-                    say(cn, "Would thou be willing to go? Say °c4Aye°c0 or °c4Nay°c0!");
+                    say(cn, "Would thou be willing to go? Say \260c4Aye\260c0 or \260c4Nay\260c0!");
                     ppd->crypt_state++;
                     didsay = 1;
                     break;
                 case 5:
                     break; // waiting for answer
                 case 6:
-                    say(cn, "And if I offered thee 30 gold pieces as reward? °c4Aye°c0 or °c4Nay°c0, %s!", ch[co].name);
+                    say(cn, "And if I offered thee 30 gold pieces as reward? \260c4Aye\260c0 or \260c4Nay\260c0, %s!", ch[co].name);
                     ppd->crypt_state++;
                     didsay = 1;
                     break;

@@ -1386,7 +1386,7 @@ void fdemon_boss(int cn, int ret, int lastact) {
                     ppd->boss_timer = realtime;
                     break;
                 case 1:
-                    say(cn, "Unfortunately, I have a lack of good leaders. But you can °c4take°c0 some men to explore the underground and solve your missions. Just be sure to °c4drop°c0 them off here again before you leave.");
+                    say(cn, "Unfortunately, I have a lack of good leaders. But you can \260c4take\260c0 some men to explore the underground and solve your missions. Just be sure to \260c4drop\260c0 them off here again before you leave.");
                     ppd->boss_stage++;
                     ppd->boss_timer = realtime;
                     break;

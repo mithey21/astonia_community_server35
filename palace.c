@@ -656,7 +656,7 @@ void islena_dead(int cn, int co) {
         say(cn, "So it must end? Why me?");
         log_char(co, LOG_SYSTEM, 0, "From now on, thou shalt be known as %s %s. Thou hast slain Islena and the purpose of thy days is fulfilled. All shall admire thine persistence, braveness and power. But still, some doubts remain. How can a mere human succeed where Ishtar failed?", Sirname(co), ch[co].name);
 
-        sprintf(buf, "0000000000°c10Grats: %s is a %s now!", ch[co].name, Sirname(co));
+        sprintf(buf, "0000000000\260c10Grats: %s is a %s now!", ch[co].name, Sirname(co));
         server_chat(6, buf);
     }
 }

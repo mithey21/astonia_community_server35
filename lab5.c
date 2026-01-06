@@ -108,7 +108,7 @@ void ritual_hurt(int cn, struct lab5_player_data *pd, int x, int y) {
         ef[fn].y = y;
     }
 
-    log_char(cn, LOG_SYSTEM, 0, "°c3The Ritual Of %s ended.°c0", daemonname[pd->ritualdaemon]);
+    log_char(cn, LOG_SYSTEM, 0, "\260c3The Ritual Of %s ended.\260c0", daemonname[pd->ritualdaemon]);
     pd->ritualdaemon = 0;
     pd->ritualstate = 0;
 
@@ -559,12 +559,12 @@ void lab5_mage_driver(int cn, int ret, int lastact) {
                 pd->magestate++;
                 break;
             case 1:
-                say(cn, "It is the entrance room to the Master °c4Demons°c0 what thou see here. Those stone plates show their names. But thou have to find their real names written on similar plates somewhere behind those doors here.");
+                say(cn, "It is the entrance room to the Master \260c4Demons\260c0 what thou see here. Those stone plates show their names. But thou have to find their real names written on similar plates somewhere behind those doors here.");
                 didsay = 1;
                 pd->magestate++;
                 break;
             case 2:
-                say(cn, "Once thou foundst the real name of a Master Demon, Thou can °c4force°c0 him to summon thee into his place, and fight him there. Thou might ask me for more details, if thou art interested.");
+                say(cn, "Once thou foundst the real name of a Master Demon, Thou can \260c4force\260c0 him to summon thee into his place, and fight him there. Thou might ask me for more details, if thou art interested.");
                 didsay = 1;
                 pd->magestate++;
                 break;
@@ -578,7 +578,7 @@ void lab5_mage_driver(int cn, int ret, int lastact) {
                 break;
             // FORCE
             case 10:
-                say(cn, "Well %s. To force a Master °c4Demon°c0 to summon thee into his place thou have to perform a certain °c4ritual°c0 first. But be very careful, %s. If thou makest only one mistake it might kill thee. The powers that are working here are strong.", ch[co].name, ch[co].name);
+                say(cn, "Well %s. To force a Master \260c4Demon\260c0 to summon thee into his place thou have to perform a certain \260c4ritual\260c0 first. But be very careful, %s. If thou makest only one mistake it might kill thee. The powers that are working here are strong.", ch[co].name, ch[co].name);
                 didsay = 1;
                 pd->magestate++;
                 break;
@@ -726,10 +726,10 @@ void lab5_mage_driver(int cn, int ret, int lastact) {
 
                     if (ritual_start(co, pd->ritualdaemon)) {
                         sound_area(ch[cn].x, ch[cn].y, 41);
-                        log_char(co, LOG_SYSTEM, 0, "°c3The Ritual of %s is fulfilled.°c0", daemonreal[pd->ritualdaemon]);
+                        log_char(co, LOG_SYSTEM, 0, "\260c3The Ritual of %s is fulfilled.\260c0", daemonreal[pd->ritualdaemon]);
                         pd->ritualstate = 0;
                     } else {
-                        log_char(co, LOG_SYSTEM, 0, "°c3Thou have to call again, but wait a while to do so!°c0");
+                        log_char(co, LOG_SYSTEM, 0, "\260c3Thou have to call again, but wait a while to do so!\260c0");
                         ch[co].endurance = ch[co].value[0][V_ENDURANCE] * POWERSCALE;
                     }
                 } else ritual_hurt(co, pd, namecoordx[pd->ritualdaemon], namecoordy[pd->ritualdaemon]);
@@ -1118,7 +1118,7 @@ void lab5_item(int in, int cn) {
                 pd->ritualdaemon = drdata[1];
                 pd->ritualstate = 1;
                 log_char(cn, LOG_SYSTEM, 0, "Thou canst read the symbols now. They form the words:");
-                log_char(cn, LOG_SYSTEM, 0, "°c3The Ritual of %s started.°c0", daemonname[pd->ritualdaemon]);
+                log_char(cn, LOG_SYSTEM, 0, "\260c3The Ritual of %s started.\260c0", daemonname[pd->ritualdaemon]);
             } else ritual_hurt(cn, pd, it[in].x, it[in].y);
         }
 
@@ -1138,7 +1138,7 @@ void lab5_item(int in, int cn) {
                 sound_area(ch[cn].x, ch[cn].y, 41);
                 pd->ritualstate = 2;
                 log_char(cn, LOG_SYSTEM, 0, "Thou canst read the symbols now. They form the words:");
-                log_char(cn, LOG_SYSTEM, 0, "°c3The ritual of %s is the Ritual of %s.°c0", daemonname[pd->ritualdaemon], daemonreal[pd->ritualdaemon]);
+                log_char(cn, LOG_SYSTEM, 0, "\260c3The ritual of %s is the Ritual of %s.\260c0", daemonname[pd->ritualdaemon], daemonreal[pd->ritualdaemon]);
             } else ritual_hurt(cn, pd, it[in].x, it[in].y);
         }
 
@@ -1158,7 +1158,7 @@ void lab5_item(int in, int cn) {
                 pd->ritualdaemon = drdata[1];
                 pd->ritualstate = 3;
                 log_char(cn, LOG_SYSTEM, 0, "Mathor tells you: \"The ritual continues. Well done so far, %s.\"", ch[cn].name);
-                // log_char(cn,LOG_SYSTEM,0,"°c3The Ritual of %s continues.°c0",daemonname[pd->ritualdaemon]);
+                // log_char(cn,LOG_SYSTEM,0,"\260c3The Ritual of %s continues.\260c0",daemonname[pd->ritualdaemon]);
             } else {
                 if (drdata[1] == 2) log_char(cn, LOG_SYSTEM, 0, "Mathor tells you: \"Sorry. But a strange power forced me.\"");
                 ritual_hurt(cn, pd, namecoordx[hurttrans[(int)drdata[1]]], namecoordy[hurttrans[(int)drdata[1]]]);
@@ -1202,7 +1202,7 @@ void lab5_item(int in, int cn) {
         // no potion door
         if (drdata[0] == 11) {
             if (ch[cn].x < it[in].x && has_potion(cn)) {
-                log_char(cn, LOG_SYSTEM, 0, "°c3Thou canst not enter carrying a mana, healing or combo potion!°c0");
+                log_char(cn, LOG_SYSTEM, 0, "\260c3Thou canst not enter carrying a mana, healing or combo potion!\260c0");
                 return;
             }
 

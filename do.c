@@ -519,7 +519,7 @@ int do_give(int cn, int dir) {
     }
 
     if ((ch[cn].flags & CF_PLAYER) && (ch[co].flags & CF_PLAYER) && (ppd = set_data(co, DRD_MISC_PPD, sizeof(struct misc_ppd))) && realtime - ppd->swapped < 20) {
-        log_char(cn, LOG_SYSTEM, 0, "°c3Give canceled: Your target has swapped recently.");
+        log_char(cn, LOG_SYSTEM, 0, "\260c3Give canceled: Your target has swapped recently.");
         error = ERR_ACCESS_DENIED;
         return 0;
     }
@@ -1198,7 +1198,7 @@ int swap(int cn, int pos) {
             return 0;
         } else if (pos < INVENTORYSIZE) { // backpack
             if (!(ch[cn].flags & CF_PAID) && pos >= UNPAIDINVENTORYSIZE) {
-                log_char(cn, LOG_SYSTEM, 0, "°c3These slots can only be used by premium accounts.");
+                log_char(cn, LOG_SYSTEM, 0, "\260c3These slots can only be used by premium accounts.");
                 return 0;
             }
         } else { // >=INVENTORYSIZE, illegal
