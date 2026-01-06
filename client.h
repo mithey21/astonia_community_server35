@@ -1,12 +1,5 @@
 /*
- * $Id: client.h,v 1.3 2006/09/14 09:55:22 devel Exp $
- *
- * $Log: client.h,v $
- * Revision 1.3  2006/09/14 09:55:22  devel
- * added questlog
- *
- * Revision 1.2  2005/12/07 13:35:56  ssim
- * added transmission of military exp
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #ifndef DIST

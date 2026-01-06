@@ -1,19 +1,6 @@
 /*
-
-$Id: area1.h,v 1.2 2006/09/14 09:55:22 devel Exp $
-
-$Log: area1.h,v $
-Revision 1.2  2006/09/14 09:55:22  devel
-added questlog
-
-Revision 1.1  2005/09/24 09:55:48  ssim
-Initial revision
-
-Revision 1.2  2003/10/13 14:11:44  sam
-Added RCS tags
-
-
-*/
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
+ */
 
 #define AF1_STORAGE_HINT (1u << 1)
 #define AF1_BUY_HINT (1u << 2)

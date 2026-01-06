@@ -1,10 +1,5 @@
 /*
- * $Id: task.h,v 1.2 2007/06/22 13:04:38 devel Exp $
- *
- * $Log: task.h,v $
- * Revision 1.2  2007/06/22 13:04:38  devel
- * removed old punishment logic
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 int process_task(unsigned char *taskdata);

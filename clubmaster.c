@@ -1,16 +1,5 @@
 /*
- * $Id: clubmaster.c,v 1.4 2007/10/29 13:57:31 devel Exp $
- *
- * $Log: clubmaster.c,v $
- * Revision 1.4  2007/10/29 13:57:31  devel
- * removed paying player check
- *
- * Revision 1.3  2007/07/04 09:19:58  devel
- * removed need for payment to found clubs
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

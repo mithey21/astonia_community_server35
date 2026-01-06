@@ -1,22 +1,5 @@
 /*
- * $Id: task.c,v 1.6 2007/07/09 11:27:15 devel Exp $
- *
- * $Log: task.c,v $
- * Revision 1.6  2007/07/09 11:27:15  devel
- * fixed typo
- *
- * Revision 1.5  2007/07/09 11:25:16  devel
- * removed some charinfo references.
- *
- * Revision 1.4  2007/06/13 15:24:52  devel
- * removed punishments from task system
- *
- * Revision 1.3  2007/05/02 12:35:41  devel
- * removed paid player check
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

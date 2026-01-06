@@ -1,10 +1,5 @@
 /*
- * $Id: death.h,v 1.2 2007/07/01 13:27:03 devel Exp $
- *
- * $Log: death.h,v $
- * Revision 1.2  2007/07/01 13:27:03  devel
- * removed /allow and helpers
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 int kill_char(int cn, int co);

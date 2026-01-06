@@ -1,16 +1,5 @@
 /*
- * $Id: see.c,v 1.4 2007/09/21 11:01:36 devel Exp $
- *
- * $Log: see.c,v $
- * Revision 1.4  2007/09/21 11:01:36  devel
- * tactics fix
- *
- * Revision 1.3  2007/07/04 09:23:43  devel
- * removed light/dark profession
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdlib.h>

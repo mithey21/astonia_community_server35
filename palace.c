@@ -1,24 +1,5 @@
 /*
- * $Id: palace.c,v 1.7 2008/04/21 09:09:19 devel Exp $
- *
- * $Log: palace.c,v $
- * Revision 1.7  2008/04/21 09:09:19  devel
- * fixed potion on ground islena bug
- *
- * Revision 1.6  2007/09/03 08:58:41  devel
- * fixed distance kill abuse against floating eyes
- *
- * Revision 1.5  2007/06/11 10:05:49  devel
- * fixed spelling error
- *
- * Revision 1.4  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.3  2005/12/01 14:44:38  ssim
- * made it possible to leave islena's room
- *
- * Revision 1.2  2005/11/27 18:04:22  ssim
- * added driver for door to islenas room (only one player at a time allowed)
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

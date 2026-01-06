@@ -1,37 +1,5 @@
 /*
- * $Id: military.c,v 1.11 2007/09/21 11:01:20 devel Exp $
- *
- * $Log: military.c,v $
- * Revision 1.11  2007/09/21 11:01:20  devel
- * raiseme gives 100 pts now
- *
- * Revision 1.10  2007/08/13 18:52:01  devel
- * fixed some warnings
- *
- * Revision 1.9  2007/08/09 11:13:36  devel
- * statistics
- *
- * Revision 1.8  2007/07/13 15:47:16  devel
- * clog -> charlog
- *
- * Revision 1.7  2007/07/09 11:23:31  devel
- * *** empty log message ***
- *
- * Revision 1.6  2007/06/07 15:04:10  devel
- * changed max level for pent missions to 102
- *
- * Revision 1.5  2007/05/02 12:33:52  devel
- * fixed minor logging bug
- *
- * Revision 1.4  2007/04/12 11:52:19  devel
- * increased EXP per mission
- *
- * Revision 1.3  2007/02/26 14:32:31  devel
- * small bugfix
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

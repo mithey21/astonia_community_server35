@@ -1,29 +1,5 @@
 /*
- * $Id: forest.c,v 1.8 2007/08/21 22:04:01 devel Exp $
- *
- * $Log: forest.c,v $
- * Revision 1.8  2007/08/21 22:04:01  devel
- * spelling errors
- * talking to william after doing imp bear hunt will no longer re-open the first forest quest (22)
- *
- * Revision 1.7  2007/08/13 18:52:01  devel
- * fixed some warnings
- *
- * Revision 1.6  2007/08/09 11:12:58  devel
- * statistics
- *
- * Revision 1.5  2007/07/11 12:37:52  devel
- * made imp understand new healing system
- *
- * Revision 1.4  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.3  2006/10/06 11:21:19  devel
- * fixed bug in william driver
- *
- * Revision 1.2  2006/09/25 14:07:57  devel
- * added questlog to forest and exkordon
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

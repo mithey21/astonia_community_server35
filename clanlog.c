@@ -1,10 +1,5 @@
 /*
- * $Id: clanlog.c,v 1.2 2007/08/09 11:11:10 devel Exp $
- *
- * $Log: clanlog.c,v $
- * Revision 1.2  2007/08/09 11:11:10  devel
- * spelling fix
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdlib.h>

@@ -1,26 +1,6 @@
 /*
-
-$Id: drdata.c,v 1.1 2005/09/24 09:48:53 ssim Exp $
-
-$Log: drdata.c,v $
-Revision 1.1  2005/09/24 09:48:53  ssim
-Initial revision
-
-Revision 1.2  2003/10/13 14:12:11  sam
-Added RCS tags
-
-
-*/
-
-/*
-drdata.c (C) 2001 D.Brockhaus
-
-drdata is used to
-	- temporarily remember things for NPCs
-	- remember things about player characters forever
-	
-To use the persistent player data feature, make sure you set the PPD flag.
-*/
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
+ */
 
 #include <stdlib.h>
 #include <string.h>

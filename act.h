@@ -1,10 +1,5 @@
 /*
- * $Id: act.h,v 1.3 2007/07/09 11:25:40 devel Exp $
- *
- * $Log: act.h,v $
- * Revision 1.3  2007/07/09 11:25:40  devel
- * added public depot check
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #define AC_IDLE 0

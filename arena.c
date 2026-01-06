@@ -1,26 +1,5 @@
 /*
- * $Id: arena.c,v 1.7 2007/07/13 15:47:16 devel Exp $ (c) 2005 D.Brockhaus
- *
- * $Log: arena.c,v $
- * Revision 1.7  2007/07/13 15:47:16  devel
- * clog -> charlog
- *
- * Revision 1.6  2007/06/26 12:40:39  devel
- * fixed orientation
- *
- * Revision 1.5  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.4  2005/12/10 21:01:35  ssim
- * fixed another loophole and a bug in arena manager
- *
- * Revision 1.3  2005/12/10 14:59:30  ssim
- * changed arena policy to not re-rent while anybody is in it
- * made arena "owner" lose his status when he leaves the arena
- *
- * Revision 1.2  2005/12/01 14:43:30  ssim
- * made small arena manager kick out all currently inside his arena when executing 'rent' command
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

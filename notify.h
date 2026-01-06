@@ -1,10 +1,5 @@
 /*
- * $Id: notify.h,v 1.2 2008/04/11 10:55:09 devel Exp $
- *
- * $Log: notify.h,v $
- * Revision 1.2  2008/04/11 10:55:09  devel
- * added arkhata notify
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #define NT_CHAR 1 // there is a character

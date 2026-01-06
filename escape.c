@@ -1,19 +1,5 @@
 /*
- * $Id: escape.c,v 1.4 2007/09/21 11:00:58 devel Exp $
- *
- * $Log: escape.c,v $
- * Revision 1.4  2007/09/21 11:00:58  devel
- * tactics fix
- *
- * Revision 1.3  2007/09/11 17:08:02  devel
- * harder escape when warcried
- *
- * Revision 1.2  2007/08/09 11:12:50  devel
- * different display for escape texts
- *
- * Revision 1.1  2007/07/04 09:21:44  devel
- * Initial revision
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdlib.h>

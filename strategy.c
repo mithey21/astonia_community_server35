@@ -1,13 +1,5 @@
 /*
- *  $Id: strategy.c,v 1.3 2007/07/01 12:10:41 devel Exp $
- *
- * $Log: strategy.c,v $
- * Revision 1.3  2007/07/01 12:10:41  devel
- * added level cap
- *
- * Revision 1.2  2007/06/11 10:06:07  devel
- * area is min level 30 now
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

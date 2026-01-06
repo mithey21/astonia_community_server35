@@ -1,29 +1,5 @@
 /*
- *
- * $Id: transport.c,v 1.8 2008/04/11 10:53:43 devel Exp $ (c) 2005 D.Brockhaus
- *
- * $Log: transport.c,v $
- * Revision 1.8  2008/04/11 10:53:43  devel
- * added arkhata teleport
- *
- * Revision 1.7  2007/06/09 15:47:11  devel
- * added aston2 and caligar transports
- *
- * Revision 1.6  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.5  2006/06/25 10:38:06  ssim
- * added transport in teufelheim
- *
- * Revision 1.4  2005/12/04 17:17:44  ssim
- * removed need for key for grimroot teleport
- *
- * Revision 1.3  2005/12/04 11:26:01  ssim
- * added teleport in nomad plains
- *
- * Revision 1.2  2005/12/04 10:35:15  ssim
- * removed unused ice teleports
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

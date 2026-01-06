@@ -1,10 +1,5 @@
 /*
- * $Id: motd.c,v 1.2 2007/08/15 09:14:19 devel Exp $
- *
- * $Log: motd.c,v $
- * Revision 1.2  2007/08/15 09:14:19  devel
- * removed test server special
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

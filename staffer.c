@@ -1,22 +1,5 @@
 /*
- * $Id: staffer.c,v 1.6 2007/08/21 22:05:48 devel Exp $
- *
- * $Log: staffer.c,v $
- * Revision 1.6  2007/08/21 22:05:48  devel
- * smuggler book gets removed
- *
- * Revision 1.5  2007/06/12 11:35:01  devel
- * fixed logging bug
- *
- * Revision 1.4  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.3  2006/12/08 10:34:46  devel
- * fixed bug in logain driver
- *
- * Revision 1.2  2006/09/26 10:59:25  devel
- * added questlog to nomad plains and brannington forest
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

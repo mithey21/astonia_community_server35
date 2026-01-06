@@ -1,48 +1,5 @@
 /*
- * $Id: server.h,v 1.14 2008/04/11 10:55:19 devel Exp $
- *
- * $Log: server.h,v $
- * Revision 1.14  2008/04/11 10:55:19  devel
- * increased body decay time
- *
- * Revision 1.13  2007/12/03 10:09:56  devel
- * added tutor flag
- *
- * Revision 1.12  2007/07/28 18:55:47  devel
- * unpaid inventory size
- *
- * Revision 1.11  2007/07/09 11:26:03  devel
- * some cleaning
- *
- * Revision 1.10  2007/07/04 09:24:23  devel
- * removed/added some professions
- *
- * Revision 1.9  2007/06/11 10:07:17  devel
- * removed IF_BEYOND...
- *
- * Revision 1.8  2007/06/07 15:29:05  devel
- * removed PK
- *
- * Revision 1.7  2007/06/07 15:18:44  devel
- * removed CF_NOBLESS
- *
- * Revision 1.6  2007/05/04 14:15:54  devel
- * CF_SHUTUP -> CF_TESTER
- *
- * Revision 1.5  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.4  2006/12/14 13:58:05  devel
- * added xmass special
- *
- * Revision 1.3  2006/08/19 17:27:52  devel
- * increased version to 3.01.00
- *
- * Revision 1.2  2005/11/27 20:03:55  ssim
- * moved CF_WON to a new bit to force all players to do it again
- *
- * Revision 1.1  2005/09/24 09:55:48  ssim
- * Initial revision
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #define TICKS 24

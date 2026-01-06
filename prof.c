@@ -1,16 +1,5 @@
 /*
- * $Id: prof.c,v 1.4 2007/07/09 11:24:10 devel Exp $
- *
- * $Log: prof.c,v $
- * Revision 1.4  2007/07/09 11:24:10  devel
- * reduced P_MAX to 10
- *
- * Revision 1.3  2007/07/04 09:23:06  devel
- * added new and removed old professions
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

@@ -1,22 +1,5 @@
 /*
- * $Id: store.c,v 1.6 2007/09/21 11:01:41 devel Exp $
- *
- * $Log: store.c,v $
- * Revision 1.6  2007/09/21 11:01:41  devel
- * tactics fix
- *
- * Revision 1.5  2007/08/09 11:14:30  devel
- * statistics
- *
- * Revision 1.4  2007/07/24 18:56:47  devel
- * made /support work with buy and sell
- *
- * Revision 1.3  2007/07/04 09:24:04  devel
- * added /support support
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdlib.h>

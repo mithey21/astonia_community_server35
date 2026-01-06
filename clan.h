@@ -1,21 +1,5 @@
 /*
- * $Id: clan.h,v 1.6 2007/11/04 12:59:43 devel Exp $ (c) 2005 D.Brockhaus
- *
- * $Log: clan.h,v $
- * Revision 1.6  2007/11/04 12:59:43  devel
- * new clan bonuses
- *
- * Revision 1.5  2007/07/27 06:00:10  devel
- * spawn frequency to 3 1/2 hours
- *
- * Revision 1.4  2007/03/03 12:15:03  devel
- * reduced spawn freq. to 11 hours
- *
- * Revision 1.3  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.2  2005/12/01 16:31:09  ssim
- * added clan message
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #define MAXCLAN 61

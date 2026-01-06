@@ -1,17 +1,5 @@
 /*
- *
- * $Id: player.h,v 1.4 2007/02/24 14:09:54 devel Exp $
- *
- * $Log: player.h,v $
- * Revision 1.4  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.3  2006/09/14 09:55:22  devel
- * added questlog
- *
- * Revision 1.2  2005/12/07 13:36:34  ssim
- * added military exp transmission
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #define MAXPLAYER 256

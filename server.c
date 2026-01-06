@@ -1,42 +1,5 @@
 /*
- * $Id: server.c,v 1.13 2008/04/11 10:52:58 devel Exp $
- *
- * $Log: server.c,v $
- * Revision 1.13  2008/04/11 10:52:58  devel
- * recognize test server and disable nologin
- *
- * Revision 1.12  2008/03/29 15:46:58  devel
- * added limits for areas 34+
- *
- * Revision 1.11  2008/03/27 09:08:52  devel
- * copyright notice updated
- *
- * Revision 1.10  2007/08/15 09:14:42  devel
- * removed test server special
- *
- * Revision 1.9  2007/06/22 13:03:14  devel
- * adjusted characters per server for NW size pents
- *
- * Revision 1.8  2007/06/12 11:33:58  devel
- * nicer ps display
- *
- * Revision 1.7  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.6  2006/12/14 13:58:05  devel
- * added xmass special
- *
- * Revision 1.5  2006/09/27 11:40:43  devel
- * fixed title msg
- *
- * Revision 1.4  2006/09/21 12:02:54  devel
- * added args[0] display of values
- *
- * Revision 1.3  2006/08/19 17:27:38  devel
- * updated (c) message to 2006
- *
- * Revision 1.2  2006/07/16 22:55:13  ssim
- * increased max chars for area 34
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #define __USE_BSD_SIGNAL

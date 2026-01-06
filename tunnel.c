@@ -1,19 +1,5 @@
 /*
- * $Id: tunnel.c,v 1.5 2008/04/11 10:54:21 devel Exp $
- *
- * $Log: tunnel.c,v $
- * Revision 1.5  2008/04/11 10:54:21  devel
- * less hp for creepers
- *
- * Revision 1.4  2007/08/09 11:14:48  devel
- * balancing
- *
- * Revision 1.3  2007/06/11 10:06:48  devel
- * removed deleted mission_ppd.h from includes
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

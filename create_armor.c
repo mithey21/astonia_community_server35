@@ -1,16 +1,5 @@
 /*
- * $Id: create_armor.c,v 1.4 2007/09/03 08:57:36 devel Exp $
- *
- * $Log: create_armor.c,v $
- * Revision 1.4  2007/09/03 08:57:36  devel
- * price change
- *
- * Revision 1.3  2007/07/09 11:20:53  devel
- * price changes
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

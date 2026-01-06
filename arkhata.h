@@ -1,3 +1,7 @@
+/*
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
+ */
+
 struct arkhata_ppd {
     int rammy_state;
     int jaz_state;

@@ -1,10 +1,5 @@
 /*
- * $Id: escape.h,v 1.1 2007/07/04 09:24:23 devel Exp $
- *
- * $Log: escape.h,v $
- * Revision 1.1  2007/07/04 09:24:23  devel
- * Initial revision
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 int char_can_flee(int cn);

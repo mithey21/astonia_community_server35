@@ -1,16 +1,6 @@
 /*
-
-$Id: direction.h,v 1.1 2005/09/24 09:55:48 ssim Exp $
-
-$Log: direction.h,v $
-Revision 1.1  2005/09/24 09:55:48  ssim
-Initial revision
-
-Revision 1.2  2003/10/13 14:12:10  sam
-Added RCS tags
-
-
-*/
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
+ */
 
 #define DX_RIGHT 1
 #define DX_RIGHTDOWN 2

@@ -1,19 +1,5 @@
 /*
- * $Id: badip.c,v 1.4 2008/04/11 10:52:18 devel Exp $ (c) 2006 D.Brockhaus
- *
- * $Log: badip.c,v $
- * Revision 1.4  2008/04/11 10:52:18  devel
- * added spam protection
- *
- * Revision 1.3  2007/07/09 11:19:46  devel
- * table merc -> table merc0
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.1  2006/09/22 09:55:46  devel
- * Initial revision
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

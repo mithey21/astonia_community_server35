@@ -1,14 +1,5 @@
 /*
- * $Id: swear.c,v 1.5 2007/08/21 22:05:59 devel Exp $
- *
- * $Log: swear.c,v $
- * Revision 1.5  2007/08/21 22:05:59  devel
- * no more filtering fuck
- *
- * Revision 1.4  2007/07/09 11:24:52  devel
- * removed shutup command
- * reduced sensitivity of anti-social tests
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <string.h>

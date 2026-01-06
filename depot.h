@@ -1,13 +1,5 @@
 /*
- * $Id: depot.h,v 1.3 2007/06/13 09:27:52 devel Exp $
- *
- * $Log: depot.h,v $
- * Revision 1.3  2007/06/13 09:27:52  devel
- * added payment tokens and free space to depot
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #define MAXDEPOT 120

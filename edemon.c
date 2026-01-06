@@ -1,10 +1,5 @@
 /*
- * $Id: edemon.c,v 1.2 2007/07/09 11:22:04 devel Exp $
- *
- * $Log: edemon.c,v $
- * Revision 1.2  2007/07/09 11:22:04  devel
- * reduce respawn rate
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

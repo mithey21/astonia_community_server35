@@ -1,56 +1,5 @@
 /*
- * $Id: random.c,v 1.17 2007/09/03 08:59:06 devel Exp $
- *
- * $Log: random.c,v $
- * Revision 1.17  2007/09/03 08:59:06  devel
- * removed kindness shrines
- *
- * Revision 1.16  2007/08/15 09:14:28  devel
- * added 9 weld shrines
- *
- * Revision 1.15  2007/08/13 18:52:01  devel
- * fixed some warnings
- *
- * Revision 1.14  2007/08/09 11:13:56  devel
- * statistics
- *
- * Revision 1.13  2007/07/13 15:47:16  devel
- * clog -> charlog
- *
- * Revision 1.12  2007/07/09 11:24:22  devel
- * reduced money needed for bribe
- *
- * Revision 1.11  2007/06/08 12:08:51  devel
- * added first kill assignment for dark skellies
- *
- * Revision 1.10  2007/06/07 15:28:54  devel
- * removed PK
- *
- * Revision 1.9  2007/06/07 15:05:01  devel
- * made weld shrine set used-flag again
- *
- * Revision 1.8  2007/05/02 12:35:22  devel
- * fixed security shrine to give max of 3 saves
- *
- * Revision 1.7  2007/04/13 10:00:16  devel
- * fixed level tab
- *
- * Revision 1.6  2007/04/13 09:43:55  devel
- * changed weld shrine to swap all mods
- * change LOE to give 3 times the exp for saves
- *
- * Revision 1.5  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.4  2006/12/19 15:19:56  devel
- * made welding shrine not overwrite description of christmas items
- *
- * Revision 1.3  2006/09/28 11:58:38  devel
- * added questlog
- *
- * Revision 1.2  2006/07/27 15:32:10  ssim
- * moved player bodies now use set_expire_body() instead of the generic function
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

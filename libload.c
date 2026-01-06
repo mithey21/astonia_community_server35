@@ -1,19 +1,5 @@
 /*
- * $Id: libload.c,v 1.5 2008/04/21 09:09:02 devel Exp $
- *
- * $Log: libload.c,v $
- * Revision 1.5  2008/04/21 09:09:02  devel
- * added arkhata catchall
- *
- * Revision 1.4  2007/07/24 18:55:44  devel
- * stackable RWW keys
- *
- * Revision 1.3  2007/06/07 15:15:40  devel
- * added caligar stuff
- *
- * Revision 1.2  2007/04/13 09:43:30  devel
- * added better error message
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #define __USE_BSD_SIGNAL

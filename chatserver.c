@@ -1,16 +1,6 @@
 /*
-
-$Id: chatserver.c,v 1.1 2005/09/24 09:48:53 ssim Exp $
-
-$Log: chatserver.c,v $
-Revision 1.1  2005/09/24 09:48:53  ssim
-Initial revision
-
-Revision 1.2  2003/10/13 14:11:53  sam
-Added RCS tags
-
-
-*/
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
+ */
 
 #define __USE_BSD_SIGNAL
 

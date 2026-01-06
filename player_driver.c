@@ -1,19 +1,5 @@
 /*
- * $Id: player_driver.c,v 1.5 2008/04/14 14:39:11 devel Exp $
- *
- * $Log: player_driver.c,v $
- * Revision 1.5  2008/04/14 14:39:11  devel
- * added questlog hint
- *
- * Revision 1.4  2007/09/11 17:08:17  devel
- * dont use LF before FR
- *
- * Revision 1.3  2007/07/13 15:47:16  devel
- * clog -> charlog
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <string.h>

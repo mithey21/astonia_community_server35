@@ -1,49 +1,5 @@
 /*
- * $Id: drvlib.c,v 1.15 2008/04/14 14:38:47 devel Exp $ (c) 2005 D.Brockhaus
- *
- * $Log: drvlib.c,v $
- * Revision 1.15  2008/04/14 14:38:47  devel
- * support for /nowarcry
- *
- * Revision 1.14  2008/03/27 09:08:42  devel
- * flee from high level improvements
- *
- * Revision 1.13  2007/12/30 12:49:56  devel
- * some fixes to fleeing demons from high level chars
- *
- * Revision 1.12  2007/09/21 11:00:41  devel
- * gatekeeper should not stop and regen
- *
- * Revision 1.11  2007/09/11 17:07:33  devel
- * no FR during LF fix
- *
- * Revision 1.10  2007/08/15 09:14:07  devel
- * NPC will no longer repeatedly cast heal
- *
- * Revision 1.9  2007/07/24 19:17:10  devel
- * added time delay to fire and lightning ball
- *
- * Revision 1.8  2007/07/09 11:21:53  devel
- * added check for cannot escape in walk_use
- *
- * Revision 1.7  2007/07/04 09:21:32  devel
- * added prio of lightning ball in fight driver
- *
- * Revision 1.6  2007/07/01 12:09:39  devel
- * fight logic no longer warcries if it would have no effect
- *
- * Revision 1.5  2007/06/22 13:02:39  devel
- * made fight_driver() use magic even if the result is minimal
- *
- * Revision 1.4  2007/05/07 09:49:12  devel
- * fixed bug in teleport_char_driver_extended
- *
- * Revision 1.3  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.2  2005/12/14 10:51:25  ssim
- * made fight driver not regenerate in tunnels
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdlib.h>

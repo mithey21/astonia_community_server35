@@ -1,15 +1,5 @@
 /*
- * $Id: sewers.c,v 1.4 2007/06/12 11:34:15 devel Exp $
- *
- * $Log: sewers.c,v $
- * Revision 1.4  2007/06/12 11:34:15  devel
- * re-added sewer items
- *
- * Revision 1.3  2007/02/28 09:43:39  devel
- * removed item creation, needs a substitute
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

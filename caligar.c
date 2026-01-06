@@ -1,28 +1,5 @@
 /*
- * $Id: caligar.c,v 1.6 2008/03/29 15:44:23 devel Exp $
- *
- * $Log: caligar.c,v $
- * Revision 1.6  2008/03/29 15:44:23  devel
- * added arkhata quest
- *
- * Revision 1.5  2007/09/21 10:59:10  devel
- * typo
- *
- * Revision 1.4  2007/08/13 18:36:39  devel
- * fixed weight door to check for correct driver
- *
- * Revision 1.3  2007/06/22 13:01:35  devel
- * fixed some typos
- *
- * Revision 1.2  2007/06/11 10:04:13  devel
- * ported fixes from v3
- *
- * Revision 1.1  2007/05/26 13:19:56  devel
- * Initial revision
- *
- * Revision 1.2  2006/09/28 11:58:38  devel
- * added questlog
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

@@ -1,25 +1,5 @@
 /*
- * $Id: effect.c,v 1.7 2008/01/03 10:10:49 devel Exp $
- *
- * $Log: effect.c,v $
- * Revision 1.7  2008/01/03 10:10:49  devel
- * added damage reduction when walking to LF
- *
- * Revision 1.6  2007/12/30 12:50:42  devel
- * LF damage per enemy scaled down for many enemies
- *
- * Revision 1.5  2007/09/11 17:07:46  devel
- * LF stronger against multiple enemies
- *
- * Revision 1.4  2007/05/09 11:34:07  devel
- * fixed bug in fireball distance
- *
- * Revision 1.3  2007/05/02 13:05:49  devel
- * fireball will no longer hit targets next to caster
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdlib.h>

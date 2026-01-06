@@ -1,38 +1,7 @@
 /*
- * $Id: tool.h,v 1.11 2008/04/11 10:55:28 devel Exp $
- *
- * $Log: tool.h,v $
- * Revision 1.11  2008/04/11 10:55:28  devel
- * added whotutor
- *
- * Revision 1.10  2008/01/03 10:11:46  devel
- * *** empty log message ***
- *
- * Revision 1.9  2007/07/28 18:55:57  devel
- * *** empty log message ***
- *
- * Revision 1.8  2007/07/04 09:25:07  devel
- * changed end_cost
- *
- * Revision 1.7  2007/07/02 08:59:26  devel
- * *** empty log message ***
- *
- * Revision 1.6  2007/07/02 08:47:23  devel
- * added IDR_HEAL
- *
- * Revision 1.5  2007/06/22 13:04:55  devel
- * *** empty log message ***
- *
- * Revision 1.4  2007/06/07 15:29:05  devel
- * removed PK
- *
- * Revision 1.3  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.2  2006/06/23 16:21:07  ssim
- * some fixes to teufel PK hooks
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
+
 
 // defining NULL ourselves saves including stdio
 #ifndef NULL

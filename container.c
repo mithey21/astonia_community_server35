@@ -1,24 +1,6 @@
 /*
-
-$Id: container.c,v 1.1 2005/09/24 09:48:53 ssim Exp $
-
-$Log: container.c,v $
-Revision 1.1  2005/09/24 09:48:53  ssim
-Initial revision
-
-Revision 1.2  2003/10/13 14:12:02  sam
-Added RCS tags
-
-
-*/
-
-/*
-container.c (C) 2001 D.Brockhaus
-
-Containers are items which can contain other items, like chests or dead bodies.
-This file contains functions to create and manipulate containers.
-
-*/
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
+ */
 
 #include <stdlib.h>
 #include <string.h>

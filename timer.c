@@ -1,5 +1,5 @@
 /*
-timer.c (C) 2001 D.Brockhaus
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
 
 Timers are the means to make things happen some time in the future.
 
@@ -10,17 +10,6 @@ time for long-running timers.
 Inserts of new timers are fairly expensive, since they need to look at
 used_timers/2 timers on average to find their position in the list.
 Possible optimization: Hash table for inserts.
-
-$Id: timer.c,v 1.1 2005/09/24 09:48:53 ssim Exp $
-
-$Log: timer.c,v $
-Revision 1.1  2005/09/24 09:48:53  ssim
-Initial revision
-
-Revision 1.2  2003/10/13 14:12:58  sam
-Added RCS tags
-
-
 */
 
 #include <stdlib.h>

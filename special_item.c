@@ -1,10 +1,5 @@
 /*
- * $Id: special_item.c,v 1.3 2008/04/14 14:39:42 devel Exp $
- *
- * $Log: special_item.c,v $
- * Revision 1.3  2008/04/14 14:39:42  devel
- * added about 30 new items
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 struct special_item {

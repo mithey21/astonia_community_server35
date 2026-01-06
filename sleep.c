@@ -1,22 +1,6 @@
 /*
-
-$Id: sleep.c,v 1.3 2007/08/09 11:14:05 devel Exp $
-
-$Log: sleep.c,v $
-Revision 1.3  2007/08/09 11:14:05  devel
-fixed bug with server too fast
-
-Revision 1.2  2007/07/09 11:24:39  devel
-added check for lost sync
-
-Revision 1.1  2005/09/24 09:48:53  ssim
-Initial revision
-
-Revision 1.2  2003/10/13 14:12:47  sam
-Added RCS tags
-
-
-*/
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
+ */
 
 #include <stdio.h>
 #include <sys/time.h>

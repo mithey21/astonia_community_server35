@@ -1,18 +1,5 @@
 /*
- * $Id: fdemon.c,v 1.6 2008/03/29 15:45:54 devel Exp $
- *
- * $Log: fdemon.c,v $
- * Revision 1.6  2008/03/29 15:45:54  devel
- * made take and drop orders follow the same rules as normal talk
- *
- * Revision 1.5  2007/07/13 15:47:16  devel
- * clog -> charlog
- *
- * Revision 1.4  2007/07/09 11:22:27  devel
- * made soldiers stronger
- * increased min rank
- * reduced respawn rate
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

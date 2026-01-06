@@ -1,11 +1,5 @@
 /*
- *
- * $Id: lab.c,v 1.2 2006/03/30 12:16:01 ssim Exp $
- *
- * $Log: lab.c,v $
- * Revision 1.2  2006/03/30 12:16:01  ssim
- * changed some elogs to xlogs to avoid cluttering the error log file with unimportant errors
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include "server.h"

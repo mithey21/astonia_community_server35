@@ -1,13 +1,5 @@
 /*
- * $Id: warrmines.c,v 1.3 2007/02/24 14:09:54 devel Exp $
- *
- * $Log: warrmines.c,v $
- * Revision 1.3  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.2  2006/09/28 11:58:38  devel
- * added questlog
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

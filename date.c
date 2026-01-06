@@ -1,18 +1,5 @@
 /*
- * $Id: date.c,v 1.3 2007/09/21 11:00:26 devel Exp $ (c) 2001 D.Brockhaus
- *
- * Game time and date. Also calculates stuff like sunrise/sunset, solstice (longest/shortest
- * day of the year), equinox (day and night of same length), the state of the moon and the
- * daylight created by sun and moon. It updates a bunch of global variables which can be used
- * to determine the current date etc.
- *
- * $Log: date.c,v $
- * Revision 1.3  2007/09/21 11:00:26  devel
- * spawn times to /time
- *
- * Revision 1.2  2007/07/24 18:55:19  devel
- * dlight darker to work better withnew client lighting
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <time.h>

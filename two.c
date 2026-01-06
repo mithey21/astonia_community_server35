@@ -1,25 +1,5 @@
 /*
- * $Id: two.c,v 1.7 2007/07/13 15:47:16 devel Exp $
- *
- * $Log: two.c,v $
- * Revision 1.7  2007/07/13 15:47:16  devel
- * clog -> charlog
- *
- * Revision 1.6  2007/07/09 11:25:27  devel
- * robber level fix
- *
- * Revision 1.5  2007/06/09 15:47:23  devel
- * fixed robber levels
- *
- * Revision 1.4  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.3  2006/10/04 17:30:57  devel
- * open quests higher than the re-opened one from the thief guild series will now close if still open
- *
- * Revision 1.2  2006/09/25 14:08:51  devel
- * added questlog to forest and exkordon
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

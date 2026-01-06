@@ -1,19 +1,5 @@
 /*
-
-$Id: light.c,v 1.1 2005/09/24 09:48:53 ssim Exp $
-
-$Log: light.c,v $
-Revision 1.1  2005/09/24 09:48:53  ssim
-Initial revision
-
-Revision 1.2  2003/10/13 14:12:18  sam
-Added RCS tags
-
-
-*/
-
-/*
-light.c (C) 2001 D.Brockhaus
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
 
 And there be light! This file contains all basic functions dealing with light
 on the map. The map has two entries for light, .light and .dlight.
@@ -25,7 +11,7 @@ wearing torches).
 of daylight which can reach a map tile. This is needed for things like entrances
 to dark places, to make the outside light diminis slowly, the deeper into the dark
 area it gets.
-*/
+ */
 
 #include <stdlib.h>
 #include <math.h>

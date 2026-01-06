@@ -1,13 +1,5 @@
 /*
- * $Id: lab2.c,v 1.3 2007/09/03 08:58:04 devel Exp $
- *
- * $Log: lab2.c,v $
- * Revision 1.3  2007/09/03 08:58:04  devel
- * fixed exp abuse
- *
- * Revision 1.2  2007/05/02 12:33:27  devel
- * fixed bug with repeat in character names
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

@@ -1,10 +1,5 @@
 /*
- * $Id: shrike.c,v 1.2 2007/12/03 10:08:47 devel Exp $
- *
- * $Log: shrike.c,v $
- * Revision 1.2  2007/12/03 10:08:47  devel
- * removed need for moon weapon
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

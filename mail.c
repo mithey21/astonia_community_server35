@@ -1,16 +1,6 @@
 /*
-
-$Id: mail.c,v 1.1 2005/09/24 09:48:53 ssim Exp $
-
-$Log: mail.c,v $
-Revision 1.1  2005/09/24 09:48:53  ssim
-Initial revision
-
-Revision 1.2  2003/10/13 14:12:22  sam
-Added RCS tags
-
-
-*/
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
+ */
 
 #include <stdio.h>
 #include <stdlib.h>

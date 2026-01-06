@@ -1,16 +1,6 @@
 /*
-
-$Id: talk.h,v 1.1 2005/09/24 09:55:48 ssim Exp $
-
-$Log: talk.h,v $
-Revision 1.1  2005/09/24 09:55:48  ssim
-Initial revision
-
-Revision 1.2  2003/10/13 14:12:56  sam
-Added RCS tags
-
-
-*/
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
+ */
 
 #define LOG_SYSTEM 0
 #define LOG_TALK 1 // dat1=co, everyone in area gets it, blocked by MF_SOUNDBLOCK|MF_SHOUTBLOCK

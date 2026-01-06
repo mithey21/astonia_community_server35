@@ -1,10 +1,5 @@
 /*
- * $Id: prof.h,v 1.2 2007/07/04 09:24:23 devel Exp $
- *
- * $Log: prof.h,v $
- * Revision 1.2  2007/07/04 09:24:23  devel
- * profession cahnges
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 struct prof {

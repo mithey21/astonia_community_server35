@@ -1,54 +1,5 @@
 /*
- * $Id: questlog.c,v 1.16 2008/04/14 14:39:21 devel Exp $
- *
- * $Log: questlog.c,v $
- * Revision 1.16  2008/04/14 14:39:21  devel
- * added arkhata quests
- *
- * Revision 1.15  2008/03/29 15:46:51  devel
- * added arkhata quests
- *
- * Revision 1.14  2007/06/07 16:58:48  devel
- * added caligar quests
- *
- * Revision 1.13  2007/02/28 10:42:34  devel
- * made yoakin's quest appear later in the questlog
- *
- * Revision 1.12  2007/02/28 09:42:30  devel
- * added logic for destroying a specific item inside all of a player's dead bodies
- *
- * Revision 1.11  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.10  2006/10/08 17:41:10  devel
- * some small fixes
- * fixed critical bg in destroy_item_byID()
- *
- * Revision 1.9  2006/10/06 18:14:38  devel
- * made impish bearhunt repeatable
- *
- * Revision 1.8  2006/10/04 17:29:09  devel
- * made quests with usable quest items not-repeatable for now
- *
- * Revision 1.7  2006/09/28 11:58:38  devel
- * added random dungeon to questlog
- * added grimroot to questlog
- *
- * Revision 1.6  2006/09/27 11:40:43  devel
- * added questlog to brannington
- *
- * Revision 1.5  2006/09/26 10:59:25  devel
- * added questlog to nomad plains and brannington forest
- *
- * Revision 1.4  2006/09/25 14:07:57  devel
- * added questlog to forest and exkordon
- *
- * Revision 1.3  2006/09/23 10:59:49  devel
- * added swamp quests to questlog
- *
- * Revision 1.2  2006/09/21 11:24:04  devel
- * added most aston quests
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

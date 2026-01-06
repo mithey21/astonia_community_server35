@@ -1,16 +1,5 @@
 /*
- * $Id: warped.c,v 1.4 2007/08/13 18:52:01 devel Exp $
- *
- * $Log: warped.c,v $
- * Revision 1.4  2007/08/13 18:52:01  devel
- * fixed some warnings
- *
- * Revision 1.3  2007/07/03 14:44:35  devel
- * *** empty log message ***
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

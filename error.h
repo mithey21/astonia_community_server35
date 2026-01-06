@@ -1,10 +1,5 @@
 /*
- * $Id: error.h,v 1.2 2007/07/09 11:25:47 devel Exp $
- *
- * $Log: error.h,v $
- * Revision 1.2  2007/07/09 11:25:47  devel
- * added error for cannot escape.
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 extern int error;

@@ -1,19 +1,5 @@
 /*
- * $Id: sidestory.c,v 1.5 2008/03/27 09:09:05 devel Exp $
- *
- * $Log: sidestory.c,v $
- * Revision 1.5  2008/03/27 09:09:05  devel
- * fixed level limits for weapons
- *
- * Revision 1.4  2007/06/26 12:41:20  devel
- * reduced ruby weapon cost from 100 to 25g
- *
- * Revision 1.3  2007/06/12 11:34:30  devel
- * fixed ruby weapon
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

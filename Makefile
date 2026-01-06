@@ -1,3 +1,5 @@
+# Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
+
 all: server35 runtime/generic/base.dll runtime/generic/lostcon.dll \
 runtime/generic/merchant.dll runtime/generic/simple_baddy.dll \
 zones/generic/weapons.itm runtime/generic/bank.dll \

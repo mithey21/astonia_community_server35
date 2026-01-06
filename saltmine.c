@@ -1,19 +1,6 @@
 /*
-
-$Id: saltmine.c,v 1.1 2005/09/24 09:48:53 ssim Exp $
-
-$Log: saltmine.c,v $
-Revision 1.1  2005/09/24 09:48:53  ssim
-Initial revision
-
-Revision 1.3  2003/11/03 12:43:51  sam
-fixed typo
-
-Revision 1.2  2003/10/13 14:12:41  sam
-Added RCS tags
-
-
-*/
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
+ */
 
 #include <stdio.h>
 #include <string.h>

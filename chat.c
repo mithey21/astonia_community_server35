@@ -1,36 +1,5 @@
 /*
- *
- * $Id: chat.c,v 1.12 2008/03/29 15:44:48 devel Exp $
- *
- * $Log: chat.c,v $
- * Revision 1.12  2008/03/29 15:44:48  devel
- * blocked channel 10 from player input
- * added hook for whotutor command
- *
- * Revision 1.11  2007/12/03 10:05:25  devel
- * staffer/tutor/gods colered names
- *
- * Revision 1.10  2007/08/21 22:02:38  devel
- * changed global channel back
- *
- * Revision 1.9  2007/08/13 18:37:00  devel
- * removed (mirror)
- *
- * Revision 1.8  2007/07/09 11:19:59  devel
- * removed shutup
- *
- * Revision 1.7  2007/07/01 13:26:46  devel
- * removed /allow and helpers
- *
- * Revision 1.6  2007/06/13 15:22:58  devel
- * added hook for kick_char_by_sID
- *
- * Revision 1.5  2007/02/28 09:42:30  devel
- * added hook for destroying a specific item inside all of a player's dead bodies
- *
- * Revision 1.4  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

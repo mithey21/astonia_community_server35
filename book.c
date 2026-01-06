@@ -1,10 +1,5 @@
 /*
- *  $Id: book.c,v 1.2 2007/06/28 12:10:52 devel Exp $
- *
- * $Log: book.c,v $
- * Revision 1.2  2007/06/28 12:10:52  devel
- * changed superior zombie names
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

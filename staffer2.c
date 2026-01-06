@@ -1,25 +1,5 @@
 /*
- * $Id: staffer2.c,v 1.7 2008/03/29 15:47:12 devel Exp $
- *
- * $Log: staffer2.c,v $
- * Revision 1.7  2008/03/29 15:47:12  devel
- * added arkhata quest
- *
- * Revision 1.6  2007/07/01 12:10:33  devel
- * reduced money rewards
- *
- * Revision 1.5  2007/06/12 11:34:43  devel
- * changed silver to gold trade ratio
- *
- * Revision 1.4  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.3  2006/10/04 17:30:17  devel
- * added a lot of items to be destroyed on quest solve
- *
- * Revision 1.2  2006/09/27 11:40:43  devel
- * added questlog to brannington
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

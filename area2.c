@@ -1,26 +1,5 @@
 /*
- * $Id: area2.c,v 1.7 2007/06/28 12:10:52 devel Exp $
- *
- * $Log: area2.c,v $
- * Revision 1.7  2007/06/28 12:10:52  devel
- * fixed bug with run-away-zombie logic
- * sun amulet gets destroyed when vamp is killed even when the quest is solved already
- *
- * Revision 1.6  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.5  2006/10/06 08:20:01  devel
- * fixed bug in vampire2 driver
- *
- * Revision 1.4  2006/10/04 17:29:09  devel
- * made daggers and sun amulet vanish after completing the vampire quests
- *
- * Revision 1.3  2006/09/22 08:55:42  devel
- * added destruction of sun amulet to finish of vampire quest 1
- *
- * Revision 1.2  2006/09/21 11:22:52  devel
- * added questlog
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

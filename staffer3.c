@@ -1,16 +1,5 @@
 /*
- * $Id: staffer3.c,v 1.4 2006/10/04 17:30:38 devel Exp $
- *
- * $Log: staffer3.c,v $
- * Revision 1.4  2006/10/04 17:30:38  devel
- * added a lot of items to be destroyed on quest solve
- *
- * Revision 1.3  2006/09/27 11:40:43  devel
- * added questlog to brannington
- *
- * Revision 1.2  2006/09/26 10:59:25  devel
- * added questlog to nomad plains and brannington forest
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

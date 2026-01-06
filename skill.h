@@ -1,22 +1,6 @@
 /*
-
-$Id: skill.h,v 1.3 2007/04/13 09:44:14 devel Exp $
-
-$Log: skill.h,v $
-Revision 1.3  2007/04/13 09:44:14  devel
-*** empty log message ***
-
-Revision 1.2  2007/02/24 14:09:54  devel
-NWO first checkin, feb 24
-
-Revision 1.1  2005/09/24 09:55:48  ssim
-Initial revision
-
-Revision 1.2  2003/10/13 14:12:47  sam
-Added RCS tags
-
-
-*/
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
+ */
 
 struct skill {
     char name[80];

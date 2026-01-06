@@ -1,26 +1,6 @@
 /*
-
-$Id: simple_baddy.c,v 1.4 2008/03/27 09:09:16 devel Exp $
-
-$Log: simple_baddy.c,v $
-Revision 1.4  2008/03/27 09:09:16  devel
-regenerating is now more important than going home
-
-Revision 1.3  2007/12/30 12:51:45  devel
-heal other only if mana is almost full
-
-Revision 1.2  2007/06/22 13:03:44  devel
-removed helper (bless other) logic
-added healer logic
-
-Revision 1.1  2005/09/24 09:48:53  ssim
-Initial revision
-
-Revision 1.2  2003/10/13 14:12:46  sam
-Added RCS tags
-
-
-*/
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
+ */
 
 #include <stdio.h>
 #include <string.h>

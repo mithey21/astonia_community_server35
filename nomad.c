@@ -1,13 +1,5 @@
 /*
- * $Id: nomad.c,v 1.3 2007/02/24 14:09:54 devel Exp $
- *
- * $Log: nomad.c,v $
- * Revision 1.3  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.2  2006/09/26 10:59:25  devel
- * added questlog to nomad plains and brannington forest
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

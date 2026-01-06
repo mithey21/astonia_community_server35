@@ -1,3 +1,4 @@
+-- Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
 
 INSERT INTO area VALUES (1,1,'The Town of Cameron',0,1232009960,9951,1,27584,139,17604608,0);
 INSERT INTO area VALUES (2,1,'The Deep Below Aston',1,1232009963,9910,1,27588,79,17240064,0);

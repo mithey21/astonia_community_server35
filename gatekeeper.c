@@ -1,34 +1,5 @@
 /*
- * $Id: gatekeeper.c,v 1.10 2007/12/03 10:08:25 devel Exp $ (c) 2006 D.Brockhaus
- *
- * $Log: gatekeeper.c,v $
- * Revision 1.10  2007/12/03 10:08:25  devel
- * fixed bug with gatekeeper spell removing door
- *
- * Revision 1.9  2007/09/21 11:01:04  devel
- * added some logging
- *
- * Revision 1.8  2007/08/13 18:37:00  devel
- * made gatekeeper rebless every 60 seconds
- *
- * Revision 1.7  2007/07/13 15:47:16  devel
- * clog -> charlog
- *
- * Revision 1.6  2007/07/09 11:22:43  devel
- * may only take 1 item to seyan
- *
- * Revision 1.5  2007/06/08 12:08:28  devel
- * changed gatekeeper seyaning delete of orbspawn ppd to explore ppd
- *
- * Revision 1.4  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.3  2006/10/06 18:14:38  devel
- * fixed seyaning to delete the questlog
- *
- * Revision 1.2  2006/01/12 12:14:33  ssim
- * now removes tunnel and IAC PPD when seyaning
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

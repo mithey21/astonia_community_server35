@@ -1,16 +1,5 @@
 /*
- *
- * $Id: area.c,v 1.6 2008/04/14 14:37:26 devel Exp $ (c) 2005 D.Brockhaus
- *
- * $Log: area.c,v $
- * Revision 1.6  2008/04/14 14:37:26  devel
- * added arkhata areas
- *
- * Revision 1.5  2007/06/22 13:00:53  devel
- * added caligar
- *
- * Revision 1.4  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdlib.h>

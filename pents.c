@@ -1,47 +1,5 @@
 /*
- * $Id: pents.c,v 1.14 2007/12/30 12:51:18 devel Exp $
- *
- * $Log: pents.c,v $
- * Revision 1.14  2007/12/30 12:51:18  devel
- * min level for using pents
- *
- * Revision 1.13  2007/06/22 13:03:06  devel
- * *** empty log message ***
- *
- * Revision 1.12  2007/05/03 14:40:03  devel
- * area solves should now get timed as well
- *
- * Revision 1.11  2007/05/02 12:34:40  devel
- * respawn is slower
- * solve respawn much slower
- *
- * Revision 1.10  2007/04/12 11:52:40  devel
- * changed EXP per pent/solve
- *
- * Revision 1.9  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.8  2006/10/08 17:40:52  devel
- * removed on xlog() call
- *
- * Revision 1.7  2006/07/16 22:55:13  ssim
- * small bugfix
- *
- * Revision 1.6  2006/07/01 10:30:50  ssim
- * added online count correction for teufelheim hpent area
- *
- * Revision 1.5  2005/12/18 14:13:50  ssim
- * added missing demon gear (boots,cape)
- *
- * Revision 1.4  2005/12/13 16:44:20  ssim
- * fixed fpents level bug in creation of new demon items (90 -> 70)
- *
- * Revision 1.3  2005/11/23 19:30:46  ssim
- * added hell pents and logic for demon armor clothes in fire/ice pents
- *
- * Revision 1.2  2005/11/22 12:16:46  ssim
- * added stackable (demon) chips
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

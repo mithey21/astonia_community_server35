@@ -1,19 +1,5 @@
 /*
- * $Id: mine.c,v 1.6 2007/11/04 12:59:35 devel Exp $
- *
- * $Log: mine.c,v $
- * Revision 1.6  2007/11/04 12:59:35  devel
- * clan smith bonus
- *
- * Revision 1.5  2007/07/04 09:22:57  devel
- * added /support support
- *
- * Revision 1.4  2007/06/11 10:05:40  devel
- * items with IF_NOENHANCE set will no longer adjust their value
- *
- * Revision 1.3  2007/05/03 14:40:03  devel
- * made metal not usable on stones
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

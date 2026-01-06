@@ -1,9 +1,5 @@
 /*
- * $Id: professor.c,v 1.4 2007/07/13 15:47:16 devel Exp $
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

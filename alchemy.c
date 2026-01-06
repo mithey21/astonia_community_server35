@@ -1,25 +1,5 @@
 /*
- * $Id: alchemy.c,v 1.7 2007/10/29 13:56:52 devel Exp $
- *
- * $Log: alchemy.c,v $
- * Revision 1.7  2007/10/29 13:56:52  devel
- * changed min levels for shrooms
- *
- * Revision 1.6  2007/10/07 11:18:05  devel
- * added min level to shrooms
- *
- * Revision 1.5  2007/07/11 12:37:14  devel
- * added some debug outputs
- *
- * Revision 1.4  2007/07/04 09:19:17  devel
- * added /support support
- *
- * Revision 1.3  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.2  2006/04/26 16:05:44  ssim
- * added hack for teufelheim arena: no potions allowed
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

@@ -1,17 +1,5 @@
 /*
- *
- * $Id: merchant.c,v 1.4 2008/03/27 08:22:44 devel Exp $
- *
- * $Log: merchant.c,v $
- * Revision 1.4  2008/03/27 08:22:44  devel
- * gender bender
- *
- * Revision 1.3  2007/07/13 15:47:16  devel
- * clog -> charlog
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

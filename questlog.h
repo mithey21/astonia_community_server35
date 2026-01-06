@@ -1,19 +1,5 @@
 /*
- * $Id: questlog.h,v 1.5 2007/02/24 14:09:54 devel Exp $
- *
- * $Log: questlog.h,v $
- * Revision 1.5  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.4  2006/10/04 17:30:57  devel
- * *** empty log message ***
- *
- * Revision 1.3  2006/09/25 14:08:51  devel
- * added questlog to forest and exkordon
- *
- * Revision 1.2  2006/09/21 11:24:04  devel
- * added most aston quests
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #define MAXQUEST 100

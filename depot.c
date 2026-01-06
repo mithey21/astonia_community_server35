@@ -1,13 +1,5 @@
 /*
- * $Id: depot.c,v 1.3 2007/12/03 10:07:57 devel Exp $
- *
- * $Log: depot.c,v $
- * Revision 1.3  2007/12/03 10:07:57  devel
- * added stone quality to depotsort
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdlib.h>

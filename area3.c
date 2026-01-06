@@ -1,40 +1,5 @@
 /*
- * $Id: area3.c,v 1.12 2007/09/21 10:58:36 devel Exp $ (c) 2005 D.Brockhaus
- *
- * $Log: area3.c,v $
- * Revision 1.12  2007/09/21 10:58:36  devel
- * gatekeeper door doesnt allow running heal any more
- *
- * Revision 1.11  2007/08/13 18:52:01  devel
- * fixed some warnings
- *
- * Revision 1.10  2007/08/09 11:10:45  devel
- * added statistics to reskin shrooms
- *
- * Revision 1.9  2007/07/13 15:47:16  devel
- * clog -> charlog
- *
- * Revision 1.8  2007/06/22 13:00:53  devel
- * added caligar quest to kelly
- *
- * Revision 1.7  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.6  2006/12/08 10:33:55  devel
- * fixed bug in carlos driver
- *
- * Revision 1.5  2006/09/23 10:01:21  devel
- * made kelly give military exp for creeper quest onl once
- *
- * Revision 1.4  2006/09/21 11:22:52  devel
- * added questlog
- *
- * Revision 1.3  2006/09/14 09:55:22  devel
- * added questlog
- *
- * Revision 1.2  2005/12/04 17:34:24  ssim
- * increased exp for carlos' quest
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

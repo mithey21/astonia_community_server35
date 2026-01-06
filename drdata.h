@@ -1,34 +1,5 @@
 /*
- * $Id: drdata.h,v 1.10 2008/04/11 10:54:40 devel Exp $ (c) 2005 D.Brockhaus
- *
- * $Log: drdata.h,v $
- * Revision 1.10  2008/04/11 10:54:40  devel
- * added arkhata ppd
- *
- * Revision 1.9  2007/06/08 12:09:07  devel
- * changed orbspawn -> explore
- *
- * Revision 1.8  2007/06/07 15:29:05  devel
- * removed PK
- *
- * Revision 1.7  2007/06/07 15:15:54  devel
- * added caligar stuff
- *
- * Revision 1.6  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.5  2006/09/14 09:55:22  devel
- * added questlog
- *
- * Revision 1.4  2006/06/26 18:14:11  ssim
- * added logic for rat nest quest
- *
- * Revision 1.3  2006/04/26 16:05:44  ssim
- * added teufelheim arena drd
- *
- * Revision 1.2  2005/12/07 13:36:18  ssim
- * added demon gambler
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 // ID's of data blocks.

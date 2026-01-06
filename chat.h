@@ -1,19 +1,6 @@
 /*
-
-$Id: chat.h,v 1.2 2007/06/13 15:25:50 devel Exp $
-
-$Log: chat.h,v $
-Revision 1.2  2007/06/13 15:25:50  devel
-*** empty log message ***
-
-Revision 1.1  2005/09/24 09:55:48  ssim
-Initial revision
-
-Revision 1.2  2003/10/13 14:11:53  sam
-Added RCS tags
-
-
-*/
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
+ */
 
 int init_chat(void);
 void tick_chat(void);

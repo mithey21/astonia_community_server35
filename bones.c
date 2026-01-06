@@ -1,10 +1,5 @@
 /*
- * $Id: bones.c,v 1.2 2007/02/24 14:09:54 devel Exp $
- *
- * $Log: bones.c,v $
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

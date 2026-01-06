@@ -1,41 +1,5 @@
 /*
- *
- * $Id: clan.c,v 1.12 2008/03/27 09:07:59 devel Exp devel $ (c) 2005 D.Brockhaus
- *
- * $Log: clan.c,v $
- * Revision 1.12  2008/03/27 09:07:59  devel
- * bonuses get turned off when jewel count reaches 0
- *
- * Revision 1.11  2007/12/03 10:06:09  devel
- * added one-time cost to bonus increase
- *
- * Revision 1.10  2007/11/04 12:59:18  devel
- * new clan bonuses
- *
- * Revision 1.9  2007/08/21 22:03:05  devel
- * *** empty log message ***
- *
- * Revision 1.8  2007/07/01 12:08:42  devel
- * fixed bug in del_jewels
- *
- * Revision 1.7  2007/04/12 11:51:32  devel
- * made characters who were in expired clans able to join a new clan right away
- *
- * Revision 1.6  2007/03/03 12:14:45  devel
- * increased costs by factor 2
- *
- * Revision 1.5  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.4  2005/12/14 15:33:15  ssim
- * added clan message display to /clan
- *
- * Revision 1.3  2005/12/01 16:31:09  ssim
- * added clan message
- *
- * Revision 1.2  2005/11/06 13:41:04  ssim
- * fixed bug in clan_dungeon_chat(): missing break would remove simple potion after successful raid
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

@@ -1,50 +1,5 @@
 /*
- * $Id: arkhata.c,v 1.3 2008/04/14 14:37:52 devel Exp $ (c) 2005 D.Brockhaus
- *
- * $Log: arkhata.c,v $
- * Revision 1.3  2008/04/14 14:37:52  devel
- * you -> thou
- * added some navigational aids for players
- *
- * Revision 1.2  2008/03/29 15:43:59  devel
- * conversion to v3.5
- *
- * Revision 1.1  2008/03/28 12:41:47  devel
- * Initial revision
- *
- * Revision 1.3  2008/03/25 09:53:15  devel
- * small fixes
- *
- * Revision 1.2  2008/03/24 11:18:57  devel
- * arkhata
- *
- * Revision 1.1  2007/12/10 10:07:50  devel
- * Initial revision
- *
- * Revision 1.9  2007/08/13 18:50:38  devel
- * fixed some warnings
- *
- * Revision 1.8  2007/06/22 12:48:30  devel
- * added caligar quest to kelly
- *
- * Revision 1.7  2007/05/26 13:19:56  devel
- * added caligar hook to kelly
- *
- * Revision 1.6  2006/12/08 10:33:55  devel
- * fixed bug in carlos driver
- *
- * Revision 1.5  2006/09/23 10:01:21  devel
- * made kelly give military exp for creeper quest onl once
- *
- * Revision 1.4  2006/09/21 11:22:52  devel
- * added questlog
- *
- * Revision 1.3  2006/09/14 09:55:22  devel
- * added questlog
- *
- * Revision 1.2  2005/12/04 17:34:24  ssim
- * increased exp for carlos' quest
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

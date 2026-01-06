@@ -1,3 +1,7 @@
+/*
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
+ */
+
 // IDs below 5 are visible to the user
 #define NOTE_NOTE 1
 #define NOTE_WARN 2

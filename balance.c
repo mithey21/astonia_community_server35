@@ -1,26 +1,5 @@
 /*
- * $Id: balance.c,v 1.6 2007/12/30 12:49:18 devel Exp $ (c) 2007 D.Brockhaus
- *
- * $Log: balance.c,v $
- * Revision 1.6  2007/12/30 12:49:18  devel
- * added rage to immunity against freeze and WC
- *
- * Revision 1.5  2007/09/21 10:58:59  devel
- * tactics fixed
- *
- * Revision 1.4  2007/07/27 05:58:38  devel
- * flash stronger
- *
- * Revision 1.3  2007/07/24 18:53:37  devel
- * rage also affects immunity
- *
- * Revision 1.2  2007/02/26 14:31:37  devel
- * mage melee weakened
- * surround hit weakened
- *
- * Revision 1.1  2007/02/24 14:09:54  devel
- * Initial revision
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include "server.h"

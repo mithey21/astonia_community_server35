@@ -1,55 +1,5 @@
 /*
- * $Id: death.c,v 1.18 2007/12/03 10:07:43 devel Exp $ (c) D.Brockhaus
- *
- * $Log: death.c,v $
- * Revision 1.18  2007/12/03 10:07:43  devel
- * death extinguishes flames
- *
- * Revision 1.17  2007/07/28 18:51:43  devel
- * feuding chars now cannot use saves when attacking by a player
- *
- * Revision 1.16  2007/07/13 15:47:16  devel
- * clog -> charlog
- *
- * Revision 1.15  2007/07/01 13:26:46  devel
- * removed /allow and helpers
- *
- * Revision 1.14  2007/06/08 12:08:16  devel
- * added first kill message for random dungeon skellies
- *
- * Revision 1.13  2007/06/07 15:28:54  devel
- * removed PK
- *
- * Revision 1.12  2007/05/25 12:25:02  devel
- * back to rev 1.10 since 1.11 didn't work out. how do you to this right?
- *
- * Revision 1.10  2007/05/04 14:15:24  devel
- * lag logic will no longer use potions and recalls in arenas
- *
- * Revision 1.9  2007/02/28 09:51:44  devel
- * made respawn use the surrounding tiles too
- *
- * Revision 1.8  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.7  2006/10/06 17:26:47  devel
- * removed some charlogs
- *
- * Revision 1.6  2006/09/21 11:23:48  devel
- * added hook for new LQ area 35
- *
- * Revision 1.5  2006/04/26 16:05:44  ssim
- * made teufelheim hooks work only on arena tiles
- *
- * Revision 1.4  2006/04/24 17:22:42  ssim
- * added hooks and basics for teufelheim PK
- *
- * Revision 1.3  2005/11/27 18:17:04  ssim
- * added no-body zone in islena's room
- *
- * Revision 1.2  2005/11/06 14:09:57  ssim
- * added check for lifeshield<0 in respawn_callback()
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

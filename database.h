@@ -1,32 +1,5 @@
 /*
- * $Id: database.h,v 1.10 2007/07/28 18:55:37 devel Exp $
- *
- * $Log: database.h,v $
- * Revision 1.10  2007/07/28 18:55:37  devel
- * log_dc
- *
- * Revision 1.9  2007/07/27 06:00:31  devel
- * *** empty log message ***
- *
- * Revision 1.8  2007/07/24 18:58:23  devel
- * exterminate needs a reason now
- *
- * Revision 1.7  2007/06/28 12:13:26  devel
- * added /showalts and plrnots
- * ,
- *
- * Revision 1.6  2007/06/22 13:04:23  devel
- * added new punishment logic
- *
- * Revision 1.5  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.4  2006/12/14 14:29:46  devel
- * added karma log
- *
- * Revision 1.3  2006/09/22 09:55:46  devel
- * added ip to parameters of login
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 int init_database(void);

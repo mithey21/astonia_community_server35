@@ -1,10 +1,5 @@
 /*
- * $Id: lab1.c,v 1.2 2007/10/29 13:58:10 devel Exp $
- *
- * $Log: lab1.c,v $
- * Revision 1.2  2007/10/29 13:58:10  devel
- * deathfibrin no longer usable when on the ground
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

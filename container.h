@@ -1,13 +1,5 @@
 /*
- * $Id: container.h,v 1.3 2007/07/01 13:27:03 devel Exp $
- *
- * $Log: container.h,v $
- * Revision 1.3  2007/07/01 13:27:03  devel
- * removed /allow and helpers
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #define MAXCONTAINER 1024

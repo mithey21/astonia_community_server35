@@ -1,34 +1,5 @@
 /*
- * $Id: lostcon.c,v 1.10 2008/04/14 14:39:00 devel Exp $
- *
- * $Log: lostcon.c,v $
- * Revision 1.10  2008/04/14 14:39:00  devel
- * support for /noshield
- *
- * Revision 1.9  2007/07/13 15:47:16  devel
- * clog -> charlog
- *
- * Revision 1.8  2007/07/11 12:38:07  devel
- * no more casting MS
- *
- * Revision 1.7  2007/07/09 11:22:56  devel
- * removed karma check
- *
- * Revision 1.6  2007/07/04 09:22:48  devel
- * some cleanup
- *
- * Revision 1.5  2007/07/02 08:58:45  devel
- * changed driver to work with new potion logic
- *
- * Revision 1.4  2007/05/04 14:15:24  devel
- * lag logic will no longer use potions and recalls in arenas
- *
- * Revision 1.3  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.2  2006/06/20 13:27:40  ssim
- * made area 34 exempt from immediate logout when in arena
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

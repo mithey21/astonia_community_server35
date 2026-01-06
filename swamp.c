@@ -1,19 +1,5 @@
 /*
- * $Id: swamp.c,v 1.5 2007/07/11 12:38:40 devel Exp $
- *
- * $Log: swamp.c,v $
- * Revision 1.5  2007/07/11 12:38:40  devel
- * made beasts vanish after a while
- *
- * Revision 1.4  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
- * Revision 1.3  2006/09/25 14:08:51  devel
- * replaced give_driver calls with more secure give_char_item
- *
- * Revision 1.2  2006/09/23 10:59:49  devel
- * added swamp quests to questlog
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
 
 #include <stdio.h>

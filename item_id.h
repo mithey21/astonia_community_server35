@@ -1,37 +1,6 @@
 /*
-
-$Id: item_id.h,v 1.7 2008/04/11 10:54:59 devel Exp $
-
-$Log: item_id.h,v $
-Revision 1.7  2008/04/11 10:54:59  devel
-added arkhata items
-
-Revision 1.6  2007/06/07 15:15:54  devel
-added caligar stuff
-
-Revision 1.5  2006/10/04 17:30:57  devel
-added some misisng ids
-
-Revision 1.4  2006/09/26 10:59:25  devel
-added questlog to nomad plains and brannington forest
-
-Revision 1.3  2005/11/22 12:16:46  ssim
-added stackable (demon) chips
-
-Revision 1.2  2005/11/21 12:07:42  ssim
-added logic for player-used demon sprite
-
-Revision 1.1  2005/09/24 09:55:48  ssim
-Initial revision
-
-Revision 1.3  2003/10/16 13:02:27  sam
-added some items from bran town (warr)
-
-Revision 1.2  2003/10/13 14:12:16  sam
-Added RCS tags
-
-
-*/
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
+ */
 
 #ifndef DEV_ID_DB
 #define DEV_ID_DB 0x01 // ID of Daniel Brockhaus

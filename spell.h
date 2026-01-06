@@ -1,20 +1,7 @@
 /*
- * $Id: spell.h,v 1.5 2007/07/04 09:24:53 devel Exp $
- *
- * $Log: spell.h,v $
- * Revision 1.5  2007/07/04 09:24:53  devel
- * heal duration 10s -> 8s
- *
- * Revision 1.4  2007/07/02 08:47:23  devel
- * added IDR_HEAL
- *
- * Revision 1.3  2007/05/02 13:06:23  devel
- * reduced cost of freeze, fire and flash
- *
- * Revision 1.2  2007/02/24 14:09:54  devel
- * NWO first checkin, feb 24
- *
+ * Part of Astonia Server 3.5 (c) Daniel Brockhaus. Please read license.txt.
  */
+
 // spell costs moved here so that NPC drivers can use them
 
 #define BLESSCOST (5 * POWERSCALE)
