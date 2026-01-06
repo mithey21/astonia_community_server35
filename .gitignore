@@ -5,13 +5,10 @@ create_armor
 create_character
 create_weapons
 motd.txt
-my
 runtime/
 server35
-start
 update_server
 v3.*
-zones/
 version
 *.e
 *.ex
