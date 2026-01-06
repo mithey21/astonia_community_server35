@@ -10,24 +10,17 @@
  *
  */
 
-struct lostcon_ppd
-{
-	int autobless;
-        int autoturn;
+struct lostcon_ppd {
+    int autobless;
+    int autoturn;
 
-	int nomana;
-	int nolife;
-	int nocombo;
-        int norecall;
+    int nomana;
+    int nolife;
+    int nocombo;
+    int norecall;
 
-	int maxlag;
+    int maxlag;
 
-	int nowarcry;
-	int noshield;
+    int nowarcry;
+    int noshield;
 };
-
-
-
-
-
-

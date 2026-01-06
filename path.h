@@ -13,7 +13,7 @@ Added RCS tags
 */
 
 int init_path(void);
-int pathfinder(int fx,int fy,int tx,int ty,int mindist,int (*check_target)(int),int maxstephint);
+int pathfinder(int fx, int fy, int tx, int ty, int mindist, int (*check_target)(int), int maxstephint);
 int pathcost(void);
 
 int pathbestdir(void);
@@ -29,4 +29,3 @@ extern int path_rect_fy;
 extern int path_rect_ty;
 
 int rect_check_target(int m);
-

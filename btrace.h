@@ -13,4 +13,3 @@ Added RCS tags
 */
 
 void btrace(char *msg);
-

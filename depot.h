@@ -10,26 +10,17 @@
  *
  */
 
-#define MAXDEPOT	120
+#define MAXDEPOT 120
 
-struct depot_ppd
-{
-	unsigned int changes;		// serial number, gets increased with each change to depot contents
-	unsigned int lastsave;		// serial number of last save
-	unsigned int loaded;		// depot was loaded correctly and can be used
-	int gold;			// gold in depot (bank account)
-	int payment_tokens;		// number of payment tokens the player owns (for use with trader or own account)
-	int dummy[11];			// free for future extensions
-        struct item itm[MAXDEPOT];	// items in depot
+struct depot_ppd {
+    unsigned int changes; // serial number, gets increased with each change to depot contents
+    unsigned int lastsave; // serial number of last save
+    unsigned int loaded; // depot was loaded correctly and can be used
+    int gold; // gold in depot (bank account)
+    int payment_tokens; // number of payment tokens the player owns (for use with trader or own account)
+    int dummy[11]; // free for future extensions
+    struct item itm[MAXDEPOT]; // items in depot
 };
-int swap_depot(int cn,int nr);
-void player_depot(int cn,int nr,int flag,int fast);
+int swap_depot(int cn, int nr);
+void player_depot(int cn, int nr, int flag, int fast);
 void depot_sort(int cn);
-
-
-
-
-
-
-
-

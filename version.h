@@ -1,2 +1,2 @@
 extern int VERSION;
-extern char *VER_DATE,*VER_TIME;
+extern char *VER_DATE, *VER_TIME;

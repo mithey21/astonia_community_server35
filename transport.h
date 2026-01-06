@@ -1,5 +1,3 @@
-struct transport_ppd
-{
-	unsigned long long seen;
+struct transport_ppd {
+    unsigned long long seen;
 };
-

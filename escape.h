@@ -7,23 +7,5 @@
  *
  */
 
-
 int char_can_flee(int cn);
-void add_enemy(int cn,int cc);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+void add_enemy(int cn, int cc);
