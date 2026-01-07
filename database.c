@@ -3113,7 +3113,6 @@ void db_read_clans(void) {
             continue;
         }
 
-        printf("clan=%p, ID=%d\n",clan,ID);
         bzero(&clan[ID], sizeof(struct clan));
         if (row[1]) {
             memcpy(&clan[ID], row[1], sizeof(struct clan));
