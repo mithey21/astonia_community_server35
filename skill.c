@@ -96,7 +96,7 @@ int calc_exp(int cn) {
 int raise_value(int cn, int v) {
     int cost;
 
-    if (v < 0 || v > V_MAX) return 0;
+    if (v < 0 || v >= V_MAX) return 0;
 
     if (!skill[v].cost) return 0;
 
@@ -128,7 +128,7 @@ int raise_value(int cn, int v) {
 int lower_value(int cn, int v) {
     int cost;
 
-    if (v < 0 || v > V_MAX) return 0;
+    if (v < 0 || v >= V_MAX) return 0;
 
     if (!skill[v].cost) return 0;
 
@@ -149,7 +149,7 @@ int lower_value(int cn, int v) {
 int raise_value_exp(int cn, int v) {
     int cost;
 
-    if (v < 0 || v > V_MAX) return 0;
+    if (v < 0 || v >= V_MAX) return 0;
 
     if (!skill[v].cost) return 0;
 
