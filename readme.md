@@ -25,7 +25,7 @@ sudo mysql_secure_installation
 # old root password is blank. new root password from 'cat MYSQLPASSWD'.
 # do not switch to unix sockets
 ./my <create_tables.sql 
-./my merc <merc.sql 
+./my merc35 <merc.sql
 echo "Welcome to Astonia" >motd.txt
 rm MYSQLPASSWD
 # the "my" script is very handy, but also a security risk!
