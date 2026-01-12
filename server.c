@@ -72,12 +72,10 @@ int
     areaM = 0, // our mirror number
     multi = 1, // start extra thread for database accesses
     cycles, // last tick used X cycles
-    server_addr, // ip address of this server
     server_port, // tcp port of this server
     time_now, // current time()
     server_net = 0, // server is supposed to use this network (if multiply interfaces are present)
     server_idle, // idle percentage of this server
-    worldID, // the world/shard this server works for
     shutdown_at = 0,
     shutdown_down = 0,
     nologin = 0,
@@ -185,13 +183,10 @@ int main(int argc, char *args[]) {
                 demon = 1;
                 break;
             case 'h':
-                fprintf(stderr, "Usage: %s [-a <areaID>] [-m <mirror>] [-w <worldID>] [-d] [-c]\n\n-d Demonize\n-c Disable concurrent database access\n\n", args[0]);
+                fprintf(stderr, "Usage: %s [-a <areaID>] [-m <mirror>] [-d] [-c]\n\n-d Demonize\n-c Disable concurrent database access\n\n", args[0]);
                 exit(0);
             case 'c':
                 multi = 0;
-                break;
-            case 'w':
-                if (optarg) worldID = atoi(optarg);
                 break;
             case 'i':
                 if (optarg) serverID = atoi(optarg);
@@ -203,7 +198,6 @@ int main(int argc, char *args[]) {
     if (!areaID) areaID = 1;
     if (!areaM) areaM = 1;
     if (!serverID) serverID = 1;
-    if (!worldID) worldID = 1;
 
     // set character number limit depending on area
     switch (areaID) {
@@ -378,7 +372,7 @@ int main(int argc, char *args[]) {
 
     init_sound_sector();
 
-    xlog("AreaID=%d, AreaM=%d, WorldID=%d: Init done, entering game loop...", areaID, areaM, worldID);
+    xlog("AreaID=%d, AreaM=%d: Init done, entering game loop...", areaID, areaM);
 
     dlog(0, 0, "Server started");
     prof_reset();
