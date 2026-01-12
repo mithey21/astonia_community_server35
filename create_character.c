@@ -83,10 +83,9 @@ int create_char(int user_ID, char *new_user, char *class) {
     char data[80];
     unsigned long long flag = 0;
     int mirror;
-    char buf[1024], dbuf[1024], ddata[1024];
+    char buf[4096], dbuf[1024], ddata[1024];
 
     if (class[2] == 'G') flag |= CF_GOD;
-    else flag |= CF_MAGE;
 
     if (class[1] == 'W') flag |= CF_WARRIOR;
     else flag |= CF_MAGE;
