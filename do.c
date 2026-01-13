@@ -561,6 +561,7 @@ int do_bless(int cn, int co) {
         return 0;
     }
 
+    // Only bless-self allowed. Well hidden, but here it is.
     if (cn != co) {
         error = ERR_ILLEGAL_CHARNO;
         return 0;
