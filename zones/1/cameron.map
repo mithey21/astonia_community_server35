@@ -71379,6 +71379,7 @@ gsprite=12006
 
 field="79,83"
 gsprite=12007
+ch=wood_skelly_key1
 
 field="80,83"
 gsprite=12008
@@ -72332,7 +72333,6 @@ flag=MF_INDOORS
 
 field="85,84"
 gsprite=59131
-ch=wood_skelly_key1
 flag=MF_INDOORS
 
 field="86,84"

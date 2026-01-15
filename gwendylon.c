@@ -809,7 +809,7 @@ void terion_driver(int cn, int ret, int lastact) {
                     didsay = 1;
                     break;
                 case 3:
-                    quiet_say(cn, "Anyway. They found nothing. Guess that is because they dare not go late at night.");
+                    quiet_say(cn, "Anyway. They found nothing. Guess that is because they dare not go late at night, or look closely enough.");
                     ppd->terion_state = 4;
                     didsay = 1;
                     break;

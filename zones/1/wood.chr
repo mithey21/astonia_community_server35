@@ -238,7 +238,7 @@ special_strength=1
 
 driver=7
 arg="aggressive=1;helper=1;scavenger=0;startdist=0;chardist=20;stopdist=50;"
-arg="dayx=85;dayy=84;daydir=3;nightx=95;nighty=84;nightdir=6;"
+arg="dayx=79;dayy=83;daydir=3;nightx=95;nighty=84;nightdir=6;"
 group=2
 class=1
 ;
