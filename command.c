@@ -46,6 +46,7 @@
 #include "questlog.h"
 #include "version.h"
 #include "item_id.h"
+#include "player_driver.h"
 
 struct gotolist {
     char *name;
@@ -972,6 +973,7 @@ static void cmd_help(int cn) {
     log_char(cn, LOG_SYSTEM, 0, "/emote <text> - express yourself (also /me, /wave, /bow, /eg)");
     log_char(cn, LOG_SYSTEM, 0, "/gold <amount> - move gold to cursor");
     log_char(cn, LOG_SYSTEM, 0, "/holler <text> - like say, but with vastly increased range");
+    log_char(cn, LOG_SYSTEM, 0, "/hints <cmd> - turn the tutorial 'off', 'on' or 'reset' it.");
     log_char(cn, LOG_SYSTEM, 0, "/ignore <name> - ignore a player in chat and tells");
     log_char(cn, LOG_SYSTEM, 0, "/join <nr> - joins chat channel <nr>");
     log_char(cn, LOG_SYSTEM, 0, "/lastseen <player> - last time player logged into the game");
@@ -2357,6 +2359,12 @@ int command(int cn, char *ptr) // 1=ok, 0=repeat
         }
         return 1;
     }
+
+    if ((len = cmdcmp(ptr, "hints", 3))) {
+        tutorial_cmd(cn, ptr+len);
+        return 1;
+    }
+
     if (cmdcmp(ptr, "autobless", 5)) {
         if ((ppd = set_data(cn, DRD_LOSTCON_PPD, sizeof(struct lostcon_ppd)))) {
             if (ppd->autobless) ppd->autobless = 0;
