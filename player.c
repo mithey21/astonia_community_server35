@@ -197,14 +197,14 @@ void decrypt(char *name, char *password) {
 }
 
 static void read_login(int nr) {
-    int cn, ret, mirror, area, ID, timeleft;
+    int cn, ret, mirror, area, ID, timeleft, magic;
     char password[MAXPASSWORD], name[sizeof(ch[0].name)], buf[16];
     unsigned long long prof;
     unsigned int hisip, ourip;
 
     if (player[nr]->in_len < sizeof(ch[0].name) + MAXPASSWORD + 4 + 12) return;
 
-    //vendor = *(unsigned int *)(player[nr]->inbuf + sizeof(ch[0].name) + MAXPASSWORD);
+    magic = *(unsigned int *)(player[nr]->inbuf + sizeof(ch[0].name) + MAXPASSWORD);
 
     memcpy(name, player[nr]->inbuf, sizeof(ch[0].name));
     name[sizeof(ch[0].name) - 1] = 0;
@@ -331,10 +331,14 @@ static void read_login(int nr) {
     player[nr]->login_time = realtime;
     player[nr]->ticker = ticker;
 
+    // we use the old vendor field to transmit the client version
+    if ((magic & 0xffffff00) == 0x8fd46100) player[nr]->client_version = magic & 0xff;
+    else player[nr]->client_version = 0;
+
     ch[cn].flags |= CF_UPDATE | CF_ITEMS | CF_PROF;
     ch[cn].driver = 0;
 
-    dlog(cn, 0, "Character entered server: his ip=%d.%d.%d.%d, our ip=%d.%d.%d.%d",
+    dlog(cn, 0, "Character entered server: his ip=%d.%d.%d.%d, our ip=%d.%d.%d.%d, v=%d",
          (hisip >> 0) & 255,
          (hisip >> 8) & 255,
          (hisip >> 16) & 255,
@@ -342,7 +346,8 @@ static void read_login(int nr) {
          (ourip >> 0) & 255,
          (ourip >> 8) & 255,
          (ourip >> 16) & 255,
-         (ourip >> 24) & 255);
+         (ourip >> 24) & 255,
+         player[nr]->client_version);
 
     log_items(cn);
 
@@ -356,6 +361,13 @@ static void read_login(int nr) {
     buf[0] = SV_MIRROR;
     *(unsigned int *)(buf + 1) = ch[cn].mirror;
     psend(nr, buf, 5);
+
+    // clients v1 and better understand SV_PROTOCOL, so we tell them the server version
+    if (player[nr]->client_version > 0) {
+        buf[0] = SV_PROTOCOL;
+        buf[1] = 1;
+        psend(nr, buf, 2);
+    }
 
     if (!(ch[cn].flags & CF_AREACHANGE)) {
         show_motd(nr);
