@@ -2530,7 +2530,7 @@ int command(int cn, char *ptr) // 1=ok, 0=repeat
         calculate_complexity(in);
         set_item_name(in);
         if (!(it[in].flags & IF_NOENHANCE)) it[in].value = it[in].quality * 10;
-        look_item(cn, it + in);
+        look_item(cn, it + in, -1);
 
         return 1;
     }
@@ -2554,7 +2554,7 @@ int command(int cn, char *ptr) // 1=ok, 0=repeat
         }
 
         strcpy(it[in].description, desc);
-        look_item(cn, it + in);
+        look_item(cn, it + in, -1);
 
         return 1;
     }
@@ -2578,7 +2578,7 @@ int command(int cn, char *ptr) // 1=ok, 0=repeat
         }
 
         strcpy(it[in].name, name);
-        look_item(cn, it + in);
+        look_item(cn, it + in, -1);
 
         return 1;
     }

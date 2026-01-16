@@ -48,7 +48,7 @@ void remove_spell(int cn, int in, int pos, int cserial, int iserial);
 void heal_tick(int cn, int in, int pos, int cserial, int iserial);
 int may_add_spell(int cn, int driver);
 
-int look_item(int cn, struct item *in);
+int look_item(int cn, struct item *in, int slot);
 int look_char(int cn, int co);
 int bigdir(int dir);
 int is_facing(int cn, int co);

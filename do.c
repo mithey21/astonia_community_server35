@@ -1361,7 +1361,7 @@ int container(int cn, int pos, int flag, int fast) {
         ch[cn].flags |= CF_ITEMS;
     } else {
         if ((in = con[ct].item[pos]))
-            look_item(cn, it + in);
+            look_item(cn, it + in, 2000 + pos);
     }
 
     return 1;
@@ -1478,7 +1478,7 @@ int look_inv(int cn, int pos) {
         return 1;
     }
 
-    look_item(cn, it + in);
+    look_item(cn, it + in, pos);
 
     return 1;
 }
