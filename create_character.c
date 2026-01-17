@@ -40,12 +40,7 @@ int init_database(void) {
     if (!mysql_init(&mysql)) return 0;
 
     // try to login as root with our password
-    if (!mysql_real_connect(&mysql, "localhost", "root", mysqlpass, "mysql", 0, NULL, 0)) {
-        fprintf(stderr, "MySQL error: %s (%d)\n", mysql_error(&mysql), mysql_errno(&mysql));
-        return 0;
-    }
-
-    if (mysql_query(&mysql, "use merc35")) {
+    if (!mysql_real_connect(&mysql, "localhost", "root", mysqlpass, "merc35", 0, NULL, 0)) {
         fprintf(stderr, "MySQL error: %s (%d)\n", mysql_error(&mysql), mysql_errno(&mysql));
         return 0;
     }

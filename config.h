@@ -1,6 +1,7 @@
 
 struct config_data {
     char *dbhost;
+    char *dbuser;
     char *dbpass;
     char *dbname;
     char *chathost;

@@ -2,7 +2,7 @@
 
 Example command line:
 ```
-./server35 -a 3 -m 13 -s dbhost=database.astonia.com -s dbpass="top secret" -s dbname=merc35_a -s chathost=chat.astonia.com
+./server35 -a 3 -m 13 -s dbhost=database.astonia.com -s dbuser=as35 -s dbpass="top secret" -s dbname=merc35_a -s chathost=chat.astonia.com
 ```
 
 Example config file. Invocation:
@@ -11,8 +11,8 @@ Example config file. Invocation:
 ```
 server.cnf:
 ```
-./server35 -a 3 -m 13 -s 
 dbhost=database.astonia.com
+dbuser=as35
 dbpass="top secret"
 dbname=merc35_a
 chathost=chat.astonia.com
@@ -21,9 +21,10 @@ chathost=chat.astonia.com
 Example environment variables:
 ```
 export AS35_DBHOST=database.astonia.com
+export AS35_DBUSER=as35
 export AS35_DBPASS="top secret"
 export AS35_DBNAME=merc35_a
-export AS_CHATHOST=chat.astonia.com
+export AS35_CHATHOST=chat.astonia.com
 
 ./server35 -a 3 -m 13 -f server.cnf
 ```

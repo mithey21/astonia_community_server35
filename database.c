@@ -143,15 +143,14 @@ int mysql_query_con(MYSQL *my, const char *query) {
 
     while (1) {
         ret = mysql_query(my, query);
-
         err = mysql_errno(my);
 
         if (err >= CR_MIN_ERROR && err <= CR_MAX_ERROR) {
             elog("lost connection to server: %s", mysql_error(my));
             mysql_close(my);
             sleep(1);
-            mysql_real_connect(my, config_data.dbhost, "root", config_data.dbpass, "mysql", 0, NULL, 0);
-        } else if (err == ER_NO_SUCH_TABLE) {
+            mysql_real_connect(my, config_data.dbhost, config_data.dbuser, config_data.dbpass, config_data.dbname, 0, NULL, 0);
+        } else if (err == ER_NO_SUCH_TABLE) { // is this still needed? We are logging in with the correct database set already?
             elog("wrong database: %s", mysql_error(my));
             sprintf(buf, "use %s", config_data.dbname);
             mysql_query(my, buf);
@@ -242,19 +241,12 @@ int init_database(void) {
     }
 
     // try to login as root with our password
-    if (!mysql_real_connect(&mysql, config_data.dbhost, "root", config_data.dbpass, "mysql", 0, NULL, 0)) {
+    if (!mysql_real_connect(&mysql, config_data.dbhost, config_data.dbuser, config_data.dbpass, config_data.dbname, 0, NULL, 0)) {
         xlog("Connect to database failed.");
         return 0;
     } else {
         xlog("Login to database as root OK");
     }
-
-    // set default database to merc
-    sprintf(buf, "use %s", config_data.dbname);
-    if (mysql_query(&mysql, buf)) {
-        elog("Failed to select database %s: Error: %s (%d)", config_data.dbname, mysql_error(&mysql), mysql_errno(&mysql));
-        return 0;
-    } else xlog("Using existing database %s", config_data.dbname);
 
     // sweep database, remove all players marked as online here. we're just starting, there shouldnt be any...
     sprintf(buf, "update chars set current_area=0,current_mirror=0 where current_area=%d and current_mirror=%d", areaID, areaM);

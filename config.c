@@ -11,6 +11,7 @@
 
 struct config_data config_data = {
     .dbhost = "localhost",
+    .dbuser = "root",
     .dbpass = "tgbdwf3h",
     .dbname = "merc35",
     .chathost = "localhost"};
@@ -18,6 +19,10 @@ struct config_data config_data = {
 void config_set_name(char *name, char *value) {
     if (!strcmp(name, "dbhost")) {
         config_data.dbhost = strdup(value);
+        return;
+    }
+    if (!strcmp(name, "dbuser")) {
+        config_data.dbuser = strdup(value);
         return;
     }
     if (!strcmp(name, "dbpass")) {
@@ -114,6 +119,7 @@ void config_getenv(void) {
     char *tmp;
 
     if ((tmp = getenv("AS35_DBHOST"))) config_data.dbhost = tmp;
+    if ((tmp = getenv("AS35_DBUSER"))) config_data.dbuser = tmp;
     if ((tmp = getenv("AS35_DBPASS"))) config_data.dbpass = tmp;
     if ((tmp = getenv("AS35_DBNAME"))) config_data.dbname = tmp;
     if ((tmp = getenv("AS35_CHATHOST"))) config_data.chathost = tmp;
