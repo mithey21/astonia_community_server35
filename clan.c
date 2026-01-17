@@ -727,13 +727,17 @@ void clan_money_change(int cnr, int diff, int cn) {
 }
 
 void kill_clan(int cnr) {
-    if (cnr > 0 && cnr < MAXCLAN) clan[cnr].treasure.debt = 9999 * 1000;
+    if (cnr > 0 && cnr < MAXCLAN) {
+        clan[cnr].treasure.debt = 9999 * 1000;
+        this_clan_changed[cnr] = 1;
+    }
 }
 
 void clan_setname(int cnr, char *name) {
     if (cnr > 0 && cnr < MAXCLAN) {
         strncpy(clan[cnr].name, name, 78);
         clan[cnr].name[78] = 0;
+        this_clan_changed[cnr] = 1;
     }
 }
 
@@ -793,31 +797,3 @@ int may_join_clan(int cn, char *errbuff) {
     }
     return 1;
 }
-
-/*
-
-spawners:
-
-area	cnt
-1	1 * 4
-2	2
-3	1
-4	4 * 2
-5	0
-6	2
-7	4
-8	4
-9	4
-10	0
-11	0
-12	0
-13	0
-14	0
-15	2
-16	2
-17	1
-      ----
-       34
-
-
-*/
