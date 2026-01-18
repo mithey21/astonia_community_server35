@@ -315,7 +315,7 @@ void player_store(int cn, int nr, int flag, int fast) {
         }
     } else {
         s = ch[co].store;
-        if (s < 1 || s > MAXSTORE) {
+        if (s < 1 || s >= MAXSTORE) {
             elog("player_store: got illegal s=%d", s);
             return;
         }
