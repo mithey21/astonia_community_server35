@@ -668,11 +668,11 @@ chatserver:		.obj/chatserver.o
 .obj/chatserver.o:	chatserver.c
 	$(CC) $(CFLAGS) -o .obj/chatserver.o -c chatserver.c
 
-create_character:	create_character.c
-	$(CC) $(CFLAGS) -o create_character create_character.c -L/usr/lib/mysql -m32 -lmysqlclient
+create_character:	create_character.c config.h .obj/config.o
+	$(CC) $(CFLAGS) -o create_character create_character.c .obj/config.o -L/usr/lib/mysql -m32 -lmysqlclient
 
-create_account:		create_account.c .obj/argon.o argon.h
-	$(CC) $(CFLAGS) -o create_account create_account.c .obj/argon.o -L/usr/lib/mysql -m32 -lmysqlclient -largon2
+create_account:		create_account.c .obj/argon.o argon.h config.h .obj/config.o
+	$(CC) $(CFLAGS) -o create_account create_account.c .obj/argon.o .obj/config.o -L/usr/lib/mysql -m32 -lmysqlclient -largon2
 
 version:	version.c
 	$(CC) $(CFLAGS) -o version version.c

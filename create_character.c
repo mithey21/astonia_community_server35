@@ -3,44 +3,25 @@
  */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <stdarg.h>
-#include <string.h>
-#include <ctype.h>
 #include <time.h>
-#include <errno.h>
-#include <math.h>
-#include <sys/ipc.h>
-#include <sys/shm.h>
-#include <netinet/in.h>
-#include <sys/socket.h>
-#include <arpa/inet.h>
-#include <netdb.h>
+#include <string.h>
+#include <getopt.h>
 #include <mysql/mysql.h>
 #include <mysql/mysqld_error.h>
 #define EXTERNAL_PROGRAM
 #include "server.h"
 #undef EXTERNAL_PROGRAM
-#include "mail.h"
-#include "statistics.h"
-#include "clan.h"
 #include "drdata.h"
-#include "skill.h"
-#include "depot.h"
-#include "club.h"
-#include "badip.h"
+#include "config.h"
 
 static MYSQL mysql;
-static char mysqlpass[80] = {"tgbdwf3h"};
 
 int init_database(void) {
     // init database client
     if (!mysql_init(&mysql)) return 0;
 
     // try to login as root with our password
-    if (!mysql_real_connect(&mysql, "localhost", "root", mysqlpass, "merc35", 0, NULL, 0)) {
+    if (!mysql_real_connect(&mysql, config_data.dbhost, config_data.dbuser, config_data.dbpass, config_data.dbname, 0, NULL, 0)) {
         fprintf(stderr, "MySQL error: %s (%d)\n", mysql_error(&mysql), mysql_errno(&mysql));
         return 0;
     }
@@ -50,6 +31,10 @@ int init_database(void) {
 
 void exit_database(void) {
     mysql_close(&mysql);
+}
+
+void help(char *prog) {
+    fprintf(stderr, "Usage: %s [-s name=value] [-f filename] [-e] <accountID> <name> <genderandclassandgod>\ngenderandclassandgod: MW = male warrior, FM = female mage, FWG = female warrior god\n-s Set config name to value (e.g. dbhost=localhost).\n-f Read config file <filename>.\n-e Read configuration from environment variables.\n", prog);
 }
 
 int create_char(int user_ID, char *new_user, char *class) {
@@ -120,8 +105,29 @@ int create_char(int user_ID, char *new_user, char *class) {
 }
 
 int main(int argc, char **args) {
-    if (argc != 4) {
-        fprintf(stderr, "Usage: %s <accountID> <name> <genderandclassandgod>\ngenderandclassandgod: MW = male warrior, FM = female mage, FWG = female warrior god\n", args[0]);
+    int c;
+
+    while (argc > 3) {
+        c = getopt(argc, args, "s:f:e");
+        if (c == -1) break;
+        switch (c) {
+        case 'h':
+            help(args[0]);
+            exit(0);
+        case 's':
+            config_string(optarg);
+            break;
+        case 'f':
+            config_file(optarg);
+            break;
+        case 'e':
+            config_getenv();
+            break;
+        }
+    }
+
+    if (argc - optind != 3) {
+        help(args[0]);
         return 1;
     }
 
@@ -130,7 +136,7 @@ int main(int argc, char **args) {
         return 3;
     }
 
-    if (!create_char(atoi(args[1]), args[2], args[3])) {
+    if (!create_char(atoi(args[optind]), args[optind + 1], args[optind + 2])) {
         printf("Success.\n");
     }
 
