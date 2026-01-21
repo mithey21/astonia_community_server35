@@ -2627,7 +2627,7 @@ void db_rescue_char(char *IDstring) {
     MYSQL_ROW row;
     unsigned char cbuf[sizeof(struct character) * 2];
     char buf[256 + sizeof(cbuf)];
-    int current_area, allowed_area, mirror, current_mirror, sID;
+    int current_area, allowed_area, mirror, current_mirror, sID, time_dead;
     struct character *tmp;
     unsigned long *len;
 
@@ -2635,7 +2635,7 @@ void db_rescue_char(char *IDstring) {
     elog("db_rescue_char %d", ID);
 
     // lock character table to avoid misshap
-    if (mysql_query_con(&mysql, "lock tables chars write, depot write")) {
+    if (mysql_query_con(&mysql, "lock tables chars write, depot write, area read")) {
         elog("Failed to lock chars: Error: %s (%d)", mysql_error(&mysql), mysql_errno(&mysql));
         return;
     }
@@ -2688,6 +2688,42 @@ void db_rescue_char(char *IDstring) {
     sID = atoi(row[5]);
     tmp = (void *)(row[0]);
 
+    if (current_area) {
+        sprintf(buf, "select alive_time from area where ID=%d and mirror=%d", current_area, current_mirror);
+        if (mysql_query_con(&mysql, buf)) {
+            elog("Failed to area ID=%d: Error: %s (%d)", current_area, mysql_error(&mysql), mysql_errno(&mysql));
+            mysql_query_con(&mysql, "unlock tables");
+            return;
+        }
+        if (!(result = mysql_store_result_cnt(&mysql))) {
+            elog("Failed to store result: Error: %s (%d)", mysql_error(&mysql), mysql_errno(&mysql));
+            mysql_query_con(&mysql, "unlock tables");
+            return;
+        }
+        if (!(row = mysql_fetch_row(result))) {
+            elog("rescue_char: fetch_row returned NULL");
+            mysql_free_result_cnt(result);
+            mysql_query_con(&mysql, "unlock tables");
+            return;
+        }
+        if (!row[0]) {
+            elog("rescue_char: one of the values NULL");
+            mysql_free_result_cnt(result);
+            mysql_query_con(&mysql, "unlock tables");
+            return;
+        }
+        time_dead = time_now - atoi(row[0]);
+        mysql_free_result_cnt(result);
+
+        if (time_dead < 60 * 5) { // is the area alive? then don't rescue.
+            elog("trying to rescue char to alive area: %s from %d (%d)", tmp->name, allowed_area, time_dead);
+            mysql_query_con(&mysql, "unlock tables");
+            return;
+        }
+    }
+
+    mysql_free_result_cnt(result);
+
     if (get_area(3, mirror, NULL, NULL)) {
         current_area = 0;
         current_mirror = 0;
@@ -2701,13 +2737,10 @@ void db_rescue_char(char *IDstring) {
         tmp->resty = tmp->tmpy = 179;
         tmp->resta = tmp->tmpa = allowed_area = 1;
     } else {
-        mysql_free_result_cnt(result);
         mysql_query_con(&mysql, "unlock tables");
         xlog("cannot rescue, area 1 and 3 are down too");
         return;
     }
-
-    mysql_free_result_cnt(result);
 
     mysql_real_escape_string(&mysql, cbuf, (void *)tmp, sizeof(struct character));
     sprintf(buf, "update chars set current_area=%d,allowed_area=%d,current_mirror=%d,chr='%s' where ID=%d",
