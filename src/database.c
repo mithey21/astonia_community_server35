@@ -1808,14 +1808,21 @@ int load_depot(int sID, int cID, struct depot_ppd *dest) {
         return 0;
     }
 
-    sprintf(query, "select data,area,mirror,cID from depot where ID=%d", sID);
+    // lock area table to avoid a race
+    if (mysql_query_con(&mysql, "lock tables depot write")) {
+        elog("Failed to lock depot table: Error: %s (%d)", mysql_error(&mysql), mysql_errno(&mysql));
+        return 0;
+    }
 
+    sprintf(query, "select data,area,mirror,cID from depot where ID=%d", sID);
     if (mysql_query_con(&mysql, query)) {
         elog("Failed to select depot sID=%d: Error: %s (%d)", sID, mysql_error(&mysql), mysql_errno(&mysql));
+        mysql_query_con(&mysql, "unlock tables");
         return 0;
     }
     if (!(result = mysql_store_result_cnt(&mysql))) {
         elog("Failed to store result: Error: %s (%d)", mysql_error(&mysql), mysql_errno(&mysql));
+        mysql_query_con(&mysql, "unlock tables");
         return 0;
     }
     if (mysql_num_rows(result) == 0) {
@@ -1826,15 +1833,18 @@ int load_depot(int sID, int cID, struct depot_ppd *dest) {
             elog("Failed to create depot sID=%d: Error: %s (%d)", sID, mysql_error(&mysql), mysql_errno(&mysql));
         }
         bzero(dest, sizeof(login.depot));
+        mysql_query_con(&mysql, "unlock tables");
         return 1;
     }
     if (!(row = mysql_fetch_row(result))) {
         elog("load_depot: fetch_row returned NULL");
         mysql_free_result_cnt(result);
+        mysql_query_con(&mysql, "unlock tables");
         return 0;
     }
     if (!row[1] || atoi(row[1]) > 0 || !row[2] || atoi(row[2]) > 0 || !row[3] || atoi(row[3]) > 0) {
         mysql_free_result_cnt(result);
+        mysql_query_con(&mysql, "unlock tables");
         return 0;
     }
 
@@ -1845,8 +1855,10 @@ int load_depot(int sID, int cID, struct depot_ppd *dest) {
     sprintf(query, "update depot set area=%d, mirror=%d, cID=%d where ID=%d", areaID, areaM, cID, sID);
     if (mysql_query_con(&mysql, query)) {
         elog("Failed to update depot sID=%d: Error: %s (%d)", sID, mysql_error(&mysql), mysql_errno(&mysql));
+        mysql_query_con(&mysql, "unlock tables");
         return 0;
     }
+    mysql_query_con(&mysql, "unlock tables");
     return 1;
 }
 
