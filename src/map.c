@@ -469,11 +469,6 @@ void check_map(void) {
             remove_destroy_char(cn);
             map[m].ch = 0;
         }
-        if ((in = map[m].it) && !(it[in].flags & IF_SIGHTBLOCK)) {
-            remove_item_map(in);
-            destroy_item(in);
-            map[m].it = 0;
-        }
         for (n = 0; n < 4; n++) {
             if ((fn = map[m].ef[n])) {
                 remove_effect(fn);
@@ -482,20 +477,10 @@ void check_map(void) {
         }
     }
     for (m = 0; m < MAXMAP * MAXMAP; m++) {
-        if ((cn = map[m].ch)) {
-            remove_destroy_char(cn);
-            map[m].ch = 0;
-        }
         if ((in = map[m].it)) {
             remove_item_map(in);
             destroy_item(in);
             map[m].it = 0;
-        }
-        for (n = 0; n < 4; n++) {
-            if ((fn = map[m].ef[n])) {
-                remove_effect(fn);
-                free_effect(fn);
-            }
         }
     }
 
@@ -511,7 +496,8 @@ void check_map(void) {
     }
     for (fn = 1; fn < MAXEFFECT; fn++) {
         if (ef[fn].type) {
-            elog("Unlinked effect %d, type=%d", fn, ef[fn].type);
+            if (ef[fn].stop >= ticker) continue; // ignore effects that are still active and should self-destruct anyway.
+            elog("Unlinked effect %d, type=%d, field_cnt=%d, start=%d, stop=%d", fn, ef[fn].type, ef[fn].field_cnt, ticker - ef[fn].start, ticker - ef[fn].stop);
         }
     }
 }

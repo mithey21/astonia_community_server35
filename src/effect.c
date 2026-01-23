@@ -633,7 +633,6 @@ static void ef_ball(int fn) {
 
     m = (ef[fn].x / 1024) + (ef[fn].y / 1024) * MAXMAP;
 
-    //(map[m].flags&(MF_TMOVEBLOCK|MF_MOVEBLOCK))
     if (ball_map_block(m) && (ef[fn].cn == 0 || map[m].ch != ef[fn].cn)) {
         remove_effect(fn);
         free_effect(fn);
