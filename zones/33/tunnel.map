@@ -297662,6 +297662,7 @@ gsprite=59785
 
 field="252,241"
 gsprite=59783
+ch=macro_daemon
 
 field="253,241"
 gsprite=59784

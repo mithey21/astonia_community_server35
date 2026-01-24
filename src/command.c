@@ -41,6 +41,7 @@
 #include "version.h"
 #include "item_id.h"
 #include "player_driver.h"
+#include "tunnel.h"
 
 struct gotolist {
     char *name;
@@ -2588,6 +2589,42 @@ int command(int cn, char *ptr) // 1=ok, 0=repeat
             depot_ppd->changes++;
         }
 
+        return 1;
+    }
+
+    if ((len = cmdcmp(ptr, "tunnels", 6))) {
+        int tunnel_level;
+		struct tunnel_ppd *tunnel_ppd;
+		
+		tunnel_ppd = set_data(cn, DRD_TUNNEL_PPD, sizeof(struct tunnel_ppd));
+		if (!tunnel_ppd) {
+			log_char(cn, LOG_SYSTEM, 0, "Bugged: Could not find tunnel ppd");
+			return 1;
+		}
+		
+		// Grab tunnel level if player specified one
+		ptr += len;
+        tunnel_level = atoi(ptr);
+		if (tunnel_level < 10) tunnel_level = 0;
+		else if (tunnel_level > 200) tunnel_level = 0;
+		
+		// If player specified a specific tunnel level to check
+		if (tunnel_level) {
+			if (tunnel_ppd->used[tunnel_level] >= MAX_POLES_PER_TUNNEL_LEVEL) log_char(cn, LOG_SYSTEM, 0, "You have finished tunnel\260c2 %d", tunnel_level);
+			else log_char(cn, LOG_SYSTEM, 0, "You have completed tunnel%s %d %d/%d times", tunnel_ppd->used[tunnel_level] ? "\260c6" : "\260c3", tunnel_level, tunnel_ppd->used[tunnel_level], MAX_POLES_PER_TUNNEL_LEVEL);
+			return 1;
+		}
+		
+		// Display all the tunnel levels the player has yet to complete, up to - 10 their level
+		tunnel_level = max(10, (int)ch[cn].level - 10);
+		log_char(cn, LOG_SYSTEM, 0, "Tunnels yet to be completed:");
+		for (int i = 10; i <= tunnel_level; i++) {
+	        if (i > 200) break;
+			if (tunnel_ppd->used[i] >= MAX_POLES_PER_TUNNEL_LEVEL) continue;
+			
+			log_char(cn, LOG_SYSTEM, 0, "Tunnel%s %d %d/%d times", tunnel_ppd->used[i] ? "\260c6" : "\260c3", i, tunnel_ppd->used[i], MAX_POLES_PER_TUNNEL_LEVEL);
+		}
+		
         return 1;
     }
 

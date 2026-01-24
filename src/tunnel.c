@@ -18,6 +18,7 @@
 #include "skill.h"
 #include "database.h"
 #include "sector.h"
+#include "tunnel.h"
 
 // library helper functions needed for init
 int ch_driver(int nr, int cn, int ret, int lastact); // character driver (decides next action)
@@ -170,11 +171,6 @@ void mission_fighter_driver(int cn, int ret, int lastact) {
     char_driver(CDR_SIMPLEBADDY, CDT_DRIVER, cn, ret, lastact);
 }
 
-struct tunnel_ppd {
-    int clevel; // current level (resets with every entry)
-    unsigned char used[204]; // already used teleport out X times
-};
-
 int creeper_tab[191] = {
     13, 15, 16, 18, 19, 20, 22, 23, 25, 26,
     28, 29, 30, 31, 33, 34, 36, 37, 39, 40,
@@ -211,7 +207,7 @@ void tunneldoor(int in, int cn) {
     if (it[in].drdata[0] == 2 || it[in].drdata[0] == 3) {
 
         if (teleport_char_driver(cn, 250, 250)) {
-            if (ppd->used[ppd->clevel] < 20) {
+            if (ppd->used[ppd->clevel] < MAX_POLES_PER_TUNNEL_LEVEL) {
 
                 ppd->used[ppd->clevel]++;
 
@@ -228,6 +224,9 @@ void tunneldoor(int in, int cn) {
                     give_military_pts_no_npc(cn, value, 1);
                     dlog(cn, 0, "got %d military rank for solving long tunnel section %d (%d)", value, ppd->clevel, ppd->used[ppd->clevel]);
                 }
+				
+				if (ppd->used[ppd->clevel] >= MAX_POLES_PER_TUNNEL_LEVEL) log_char(cn, LOG_SYSTEM, 0, "You have finished tunnel\260c2 %d", ppd->clevel);
+				else log_char(cn, LOG_SYSTEM, 0, "You have completed tunnel\260c6 %d %d/%d times", ppd->clevel, ppd->used[ppd->clevel], MAX_POLES_PER_TUNNEL_LEVEL);
 
             } else log_char(cn, LOG_SYSTEM, 0, "You cannot get any more experience for this level.");
             ppd->clevel = 10;
@@ -239,7 +238,7 @@ void tunneldoor(int in, int cn) {
         else if (ch[cn].level <= 100) ppd->clevel = ch[cn].level - 10;
         else {
             for (n = 90; n < ch[cn].level - 10; n++) {
-                if (ppd->used[n] < 20) break;
+                if (ppd->used[n] < MAX_POLES_PER_TUNNEL_LEVEL) break;
             }
             ppd->clevel = n;
         }
