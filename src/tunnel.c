@@ -224,9 +224,9 @@ void tunneldoor(int in, int cn) {
                     give_military_pts_no_npc(cn, value, 1);
                     dlog(cn, 0, "got %d military rank for solving long tunnel section %d (%d)", value, ppd->clevel, ppd->used[ppd->clevel]);
                 }
-				
-				if (ppd->used[ppd->clevel] >= MAX_POLES_PER_TUNNEL_LEVEL) log_char(cn, LOG_SYSTEM, 0, "You have finished tunnel\260c2 %d", ppd->clevel);
-				else log_char(cn, LOG_SYSTEM, 0, "You have completed tunnel\260c6 %d %d/%d times", ppd->clevel, ppd->used[ppd->clevel], MAX_POLES_PER_TUNNEL_LEVEL);
+
+                if (ppd->used[ppd->clevel] >= MAX_POLES_PER_TUNNEL_LEVEL) log_char(cn, LOG_SYSTEM, 0, "You have finished tunnel\260c2 %d", ppd->clevel);
+                else log_char(cn, LOG_SYSTEM, 0, "You have completed tunnel\260c6 %d %d/%d times", ppd->clevel, ppd->used[ppd->clevel], MAX_POLES_PER_TUNNEL_LEVEL);
 
             } else log_char(cn, LOG_SYSTEM, 0, "You cannot get any more experience for this level.");
             ppd->clevel = 10;
